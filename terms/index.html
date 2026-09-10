@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- DRAFT for Sergio to review. Not linked from the site until approved. -->
+<!-- DRAFT for Sergio to review. Not linked from the homepage until approved. Placeholder left for Sergio: [jurisdiction] in section 11, Governing law. -->
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Terms · Give to Reach</title><style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
@@ -134,16 +134,86 @@
       .profile-info { text-align: center; }
     }
   
-main{max-width:720px;margin:40px auto;padding:0 20px;line-height:1.6}h1,h2{line-height:1.2}</style></head><body><main>
+main{max-width:720px;margin:40px auto;padding:0 20px;line-height:1.6}h1,h2{line-height:1.2}
+main h2{font-size:22px;font-weight:600;color:#1b5e20;margin:36px 0 12px}
+main p{margin-bottom:14px}
+main ul,main ol{margin:0 0 16px 22px}
+main li{margin-bottom:8px}
+main a{color:#1b5e20}
+main .meta{color:#555;font-size:15px}
+main .placeholder{background:#fff3cd;padding:0 5px;border-radius:4px;font-weight:600}
+</style></head><body><main>
 <h1>Terms</h1>
-<p><em>Last updated: [date]. Contact: [contact email].</em></p>
-<p>Give to Reach is a personal, non-commercial tool run by Sergio González. By installing it you agree to the following.</p>
+<p class="meta"><em>Last updated: 10 September 2026. Operator and contact: Sergio González, <a href="mailto:sergigon@gmail.com">sergigon@gmail.com</a>.</em></p>
+
+<p>Give to Reach is a personal, non-commercial Gmail add-on made and run by Sergio González. It is free, it is not a company or a product for sale, and it exists to run a small public experiment about cold email. By installing it you agree to the following. The <a href="/privacy/">privacy policy</a> is part of these terms.</p>
+
+<h2>1. What it does in your name</h2>
 <ul>
-<li>It acts on your mailbox as you: it archives mail from unknown senders under a label and sends one reply per sender in your name. You can review, restore or stop this at any time.</li>
-<li>It is provided as is, without warranty. It is designed so that any failure leaves your mail in your inbox as normal, but you remain responsible for your own inbox.</li>
-<li>The donation a sender makes goes to a registered charity through Every.org and is not a payment to you or to Sergio González. Receipts come from Every.org. The reply promise made to senders is yours to keep.</li>
-<li>Scoring by an AI model is optional and switched on by you. Its results are opinions of a model, not facts about a sender.</li>
-<li>Aggregated, non-identifying statistics may be published as described in the <a href="/privacy/">privacy policy</a>.</li>
-<li>You may stop using the tool at any time by uninstalling it. These terms are governed by the laws of [jurisdiction].</li>
+<li>It runs inside your own Google account, as you, once an hour. It moves mail from senders you have never dealt with, who are pitching you, out of your inbox under a visible label, and sends one reply in that thread, from your address and in your name, asking the sender to give $3 to GiveDirectly to have the email put back.</li>
+<li>Nothing is deleted. You can review, restore, mark a sender as known, or stop the whole thing at any time from the add-on's card, and by uninstalling it.</li>
+<li>For the first three to five business days after you install, it only reports what it would have held. It archives nothing and replies to nobody until you have read those reports and switched replies on yourself.</li>
 </ul>
-<p><a href="/">Back to Give to Reach</a></p></main></body></html>
+
+<h2>2. Who may use it</h2>
+<ul>
+<li>You must be the owner of the Gmail mailbox you install it on, or have that owner's permission.</li>
+<li>If your mailbox belongs to an employer's Google Workspace, it is your responsibility to make sure that installing add-ons, archiving mail automatically, sending automated replies, and (if you switch it on) sending a stranger's pitch to an outside AI service for scoring are allowed there. The scoring switch is off by default for that reason.</li>
+<li>It is offered to a small group of people Sergio knows, for the purpose of the experiment. It may be withdrawn from anyone at any time.</li>
+</ul>
+
+<h2>3. The reply promise is yours</h2>
+<ul>
+<li>The automated reply promises the sender an answer within a number of business days (three by default; you set it) once their gift has landed. That promise is made in your name and it is yours to keep. The add-on restores the email, stars it, shows you a countdown and nags you, but it cannot answer for you.</li>
+<li>You approve the wording of the reply, and you are responsible for it as for any email sent from your address. The reply carries your name and, if you choose to include one, your postal address.</li>
+<li>Before installing, remove any Gmail filter or other rule that archives unknown senders; it would work against the add-on and could hide a restored email from you.</li>
+</ul>
+
+<h2>4. Donations</h2>
+<ul>
+<li>A sender's gift goes to GiveDirectly through Every.org. Every.org is a registered US 501(c)(3) public charity and is the legal recipient of the gift; it issues the donor's receipt and its own terms apply to the transaction. The same charity applies to everyone; you cannot choose a different one.</li>
+<li>The gift is not a payment to you, to Sergio González, or to Give to Reach. Nobody involved other than Every.org and GiveDirectly ever touches the money, and neither you nor Sergio can refund a gift. If you miss your reply promise, what the sender is owed is your apology.</li>
+<li>The amount and wording a sender sees may vary between senders while an experiment is running (for example $3 against $5). The amount is always stated to the sender before they give.</li>
+<li>Nothing here is tax advice for you or for a sender. Whether a gift is deductible is a question for the donor and their tax authority.</li>
+</ul>
+
+<h2>5. Scoring by an AI model</h2>
+<ul>
+<li>Scoring is optional and switched on by you. When it is on, the text of a held pitch is sent from your own account to Anthropic and scored against a fixed rubric, as described in the privacy policy.</li>
+<li>The scores, categories and excerpts are the opinions of a model about a piece of writing, not facts about a person or a company. They decide only whether an automated reply goes out; anything the model does not read as a cold pitch stays held for you to look at, and nobody is replied to. Do not use them for any decision about a person beyond answering their email.</li>
+</ul>
+
+<h2>6. The experiment and published results</h2>
+<ul>
+<li>By installing you agree that scores, categories, placeholdered excerpts, the variant shown, a hashed sender identifier and event timestamps for the emails the add-on gates may be sent to the Give to Reach relay and pooled with other participants' data, and that pooled, non-identifying statistics may be published, all as described in the <a href="/privacy/">privacy policy</a>.</li>
+<li>A line of your own on the public page, under an anonymous label, appears only if you separately agree to it.</li>
+<li>Nothing about the experiment is sold or shared for any other purpose.</li>
+</ul>
+
+<h2>7. Availability and changes</h2>
+<ul>
+<li>The add-on and the relay may be changed, paused or shut down at any time, and updates may be delivered to your install through the Google Workspace Marketplace without notice. Sergio may also stop all activity in every install at once with a kill switch.</li>
+<li>It is designed to fail open: if it stops, or breaks, or is switched off, your mail simply arrives in your inbox as normal, and anything already held stays under its label for you to restore.</li>
+<li>These terms may be updated. If the way the add-on uses your Google data changes, you will be asked to consent again inside the add-on before the change takes effect.</li>
+</ul>
+
+<h2>8. Ending your use</h2>
+<p>Uninstall the add-on at any time; that revokes its access to your account. Anything still held stays under its label in your mailbox and your log stays in your Drive until you delete them. Ask at the contact address to have your data removed from the relay.</p>
+
+<h2>9. No warranty</h2>
+<p>Give to Reach is provided as is and as available, without any warranty of any kind, express or implied, including that it will hold the right emails, leave the right ones alone, send every reply, notice every gift, or run at all. It is a personal project maintained in spare time. You remain responsible for your own inbox and for what is sent from it.</p>
+
+<h2>10. Limitation of liability</h2>
+<p>To the fullest extent permitted by law, Sergio González is not liable for any loss or damage arising from your use of Give to Reach, including a held or missed email, a reply sent in your name, a sender's reaction, a gift that was not matched, or a missed reply promise. Where liability cannot be excluded by law it is limited to the amount you paid for the service, which is nothing.</p>
+
+<h2>11. Governing law</h2>
+<!-- PLACEHOLDER for Sergio: replace [jurisdiction] with the country or state whose law should govern (for example "Spain" or "the State of California"). -->
+<p>These terms are governed by the laws of <span class="placeholder">[jurisdiction]</span>, and any dispute will be brought before the courts there, without prejudice to any protection you are entitled to under the law of the place where you live.</p>
+
+<h2>12. Google</h2>
+<p>Your use of Gmail and Google Drive remains subject to Google's own terms. The add-on's use of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements, as set out in the privacy policy.</p>
+
+<h2>13. Contact</h2>
+<p>Sergio González, <a href="mailto:sergigon@gmail.com">sergigon@gmail.com</a>.</p>
+
+<p><a href="/">Back to Give to Reach</a> · <a href="/privacy/">Privacy policy</a></p></main></body></html>

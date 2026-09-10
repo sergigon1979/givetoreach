@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- DRAFT for Sergio to review. Not linked from the site until approved. -->
+<!-- DRAFT for Sergio to review. Not linked from the homepage until approved. Placeholders left for Sergio: none on this page. -->
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Privacy policy · Give to Reach</title><style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
@@ -134,44 +134,166 @@
       .profile-info { text-align: center; }
     }
   
-main{max-width:720px;margin:40px auto;padding:0 20px;line-height:1.6}h1,h2{line-height:1.2}</style></head><body><main>
+main{max-width:720px;margin:40px auto;padding:0 20px;line-height:1.6}h1,h2{line-height:1.2}
+main h2{font-size:22px;font-weight:600;color:#1b5e20;margin:36px 0 12px}
+main h3{font-size:17px;font-weight:600;margin:22px 0 8px}
+main p{margin-bottom:14px}
+main ul,main ol{margin:0 0 16px 22px}
+main li{margin-bottom:8px}
+main a{color:#1b5e20}
+main code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:13px;background:#f1f3f4;padding:1px 5px;border-radius:4px;word-break:break-all}
+main .meta{color:#555;font-size:15px}
+main .box{background:#f8f9fa;border-radius:12px;padding:20px 24px;margin:16px 0 24px}
+main .disclosure{background:#e8f5e9;border-radius:12px;padding:18px 22px;margin:12px 0 20px;font-weight:500}
+main .scope{margin-bottom:18px}
+main .scope code{display:inline-block;margin-bottom:4px}
+main .toc{font-size:15px;margin-bottom:24px}
+main .toc a{margin-right:12px;white-space:nowrap}
+main .contents ol{margin-left:22px}
+</style></head><body><main>
 <h1>Privacy policy</h1>
-<p><em>Last updated: [date]. Contact: [contact email].</em></p>
-<p>Give to Reach is a personal Gmail add-on run by Sergio González. It holds email from senders you do not know, asks them to make a small donation to a charity to have the email restored, and keeps a log of what happened. This page explains what it reads, what it sends where, and what it never does.</p>
+<p class="meta"><em>Last updated: 10 September 2026. Operator and contact: Sergio González, <a href="mailto:sergigon@gmail.com">sergigon@gmail.com</a>.</em></p>
 
-<h2>What the add-on reads</h2>
+<p>Give to Reach is a personal, non-commercial Gmail add-on made and run by Sergio González. Once an hour it looks at new mail in your inbox, sets aside mail from people you have never dealt with who are pitching you, replies once in that thread with a link to give $3 to GiveDirectly, puts the email back in your inbox when the gift lands, and keeps a log of what happened. This page says exactly what it reads, what leaves your Google account and where it goes, what is kept for how long, and what it never does. It is written for two audiences: people who install the add-on ("you"), and people who write to them and receive the automated reply ("senders", see <a href="#senders">For senders</a>).</p>
+
+<div class="contents box"><strong>Contents</strong>
+<ol>
+<li><a href="#summary">In one paragraph</a></li>
+<li><a href="#permissions">The permissions it asks for, one by one</a></li>
+<li><a href="#reads">What it reads</a></li>
+<li><a href="#leaves">What leaves your account, and to whom</a></li>
+<li><a href="#never">What it never does</a></li>
+<li><a href="#controls">Your controls</a></li>
+<li><a href="#retention">What is kept, where, and for how long</a></li>
+<li><a href="#published">Published results</a></li>
+<li><a href="#google">Google API Services User Data Policy and Limited Use</a></li>
+<li><a href="#senders">For senders</a></li>
+<li><a href="#changes">Changes to this policy</a></li>
+<li><a href="#contact">Contact</a></li>
+</ol></div>
+
+<h2 id="summary">1. In one paragraph</h2>
+<p>The add-on runs on Google's servers, inside your own Google account, as you. No server of Sergio's ever holds a permission to your mailbox. Mail from people you know is never read beyond its headers. Only a message that the add-on has already set aside as an unknown sender's pitch is read in full, and its text leaves your account only if you switch scoring on, in which case it goes straight from your account to Anthropic, is scored, and is discarded. What Sergio's relay receives about an email is a set of scores, a category, a one-line description of what was being sold, short excerpts with names, companies and links replaced by placeholders, which price and wording was shown, a one-way hash of the sender's address, and timestamps of what happened. Never the message itself. Nothing is ever deleted from your mailbox, and nothing about your mail is sold, used for advertising, or used to train AI models.</p>
+
+<h2 id="permissions">2. The permissions it asks for, one by one</h2>
+<p>These are the eight Google permissions (OAuth scopes) the add-on declares. All of them are declared from the first version so that a later update never has to ask you for more. For each, the name is the exact identifier Google shows you on the consent screen, followed by what the add-on does with it and what it does not do.</p>
+
+<div class="scope"><code>https://www.googleapis.com/auth/gmail.addons.execute</code><br>
+<strong>Run as a Gmail add-on.</strong> Lets the add-on appear inside Gmail, on the web and in the Gmail app, and show its cards: a homepage card with this week's counts and the held list, a card next to an open message with that message's verdict, and a settings card. This permission carries no data by itself.</div>
+
+<div class="scope"><code>https://www.googleapis.com/auth/gmail.addons.current.message.metadata</code><br>
+<strong>See the open message's metadata while the add-on is running</strong> (Google's wording: "View your email message metadata when the add-on is running"). When you open an email with the add-on's panel open, this lets the card know which message you are looking at (its id, sender and subject) so it can show the right verdict from your log. Access is temporary and limited to the message you opened.</div>
+
+<div class="scope"><code>https://www.googleapis.com/auth/gmail.modify</code><br>
+<strong>Read, label, archive, restore and send in your mailbox</strong> (Google's wording: "Read, compose, and send emails from your Gmail account. This scope does not allow immediate, permanent deletion of threads and messages, bypassing the trash"). This is the working permission for the hourly job, and it is the one Google classes as restricted. The add-on uses it to: list mail that arrived in your inbox since its last pass and read the headers of each message (sender, recipients, subject, date, message id, authentication results, mailing-list and auto-reply headers, Gmail's category); read the text of a message only after that message has been set aside as an unknown sender's pitch, and only to score it if scoring is on and to recognise a sender who has come back under a new address; create its own labels and apply them; move a held thread out of the inbox and back in, star it and mark it unread; send one reply in your name inside the sender's thread; read your own email address and send-as aliases so replies come from the right one; and notice when you have replied in a thread whose sender gave. It never deletes anything, never touches the trash, never reads or changes your settings, filters or contacts through this permission, and never sends anything except the one reply per gated thread and a daily summary to you.</div>
+
+<div class="scope"><code>https://www.googleapis.com/auth/contacts.readonly</code><br>
+<strong>Read your saved contacts.</strong> The add-on reads the email addresses of your contacts, once a day, to build its list of people it must never gate. The list stays inside your Google account. Contacts are never written, changed, or sent anywhere.</div>
+
+<div class="scope"><code>https://www.googleapis.com/auth/contacts.other.readonly</code><br>
+<strong>Read your "Other contacts".</strong> These are the addresses Google saves automatically when you email someone or interact with them. The add-on reads them for the same reason: anyone you have ever written to is a known sender and is left alone. Read-only, and never sent anywhere.</div>
+
+<div class="scope"><code>https://www.googleapis.com/auth/drive.file</code><br>
+<strong>Create and write to its own file in your Drive.</strong> The add-on creates one spreadsheet in your Google Drive, the log, and appends a row for every email it gates. This permission only reaches files the add-on itself created; it cannot see, open or list any other file in your Drive. The log is yours: rename it, move it, share it or delete it.</div>
+
+<div class="scope"><code>https://www.googleapis.com/auth/script.external_request</code><br>
+<strong>Call outside services from your account</strong> (Google's wording: "Allows the project to make UrlFetch requests"). The add-on talks to exactly three outside hosts, all listed in its manifest and nothing else: Anthropic's API (scoring, only if you switch it on), Every.org (the donation link and its notification), and the Give to Reach relay at go.givetoreach.com. Section 4 says what each one receives.</div>
+
+<div class="scope"><code>https://www.googleapis.com/auth/script.scriptapp</code><br>
+<strong>Create its own hourly timer</strong> (Google's wording: "Allows the project to create triggers"). The add-on creates one time-driven trigger, running once an hour, and removes it when you switch it off or uninstall. That timer is what makes it work without you opening Gmail.</div>
+
+<h2 id="reads">3. What it reads</h2>
 <ul>
-<li><strong>Message headers</strong> of new mail in your inbox (sender, recipients, subject, date, message id, authentication results and list headers), to decide whether a sender is already known to you.</li>
-<li><strong>Your contacts and "other contacts"</strong> (people you have emailed), to build the list of known senders. This list stays in your own Google account.</li>
-<li><strong>The text of held messages only</strong>, meaning mail from unknown senders that the add-on has set aside, and only if you switch scoring on. Mail from people you know is never read beyond its headers.</li>
+<li><strong>Message headers</strong> of new mail in your inbox: sender, recipients, subject, date, message id, authentication results (SPF, DKIM, DMARC), mailing-list and auto-reply headers, and Gmail's own category. Headers are enough to decide whether a sender is known to you and whether a message is a newsletter, a receipt, a bounce, a calendar invite or bulk mail, all of which are left alone.</li>
+<li><strong>Your contacts and "other contacts"</strong>, to build the list of known senders. The list stays in your own Google account.</li>
+<li><strong>The text of held messages only</strong>: mail from an unknown sender that the add-on has already set aside. It is read to score the pitch, if you have switched scoring on, and to recognise a repeat sender writing from a new domain. Mail from people you know is never read beyond its headers. Your own sent mail is searched only to answer "have I written to this address before".</li>
 </ul>
 
-<h2>What it sends, and to whom</h2>
+<h2 id="leaves">4. What leaves your account, and to whom</h2>
+<p>Everything else about your mail stays inside your Google account. These are the only three recipients, and exactly what each one receives.</p>
+
+<h3>Anthropic (Claude), for scoring, only if you switch scoring on</h3>
 <ul>
-<li><strong>Anthropic</strong> (Claude), for scoring, if you switch scoring on: the text of a held pitch, with your own name and address replaced by placeholders. The result is a set of scores and labels. The text is not stored by the add-on after scoring, and Anthropic does not use API traffic to train its models.</li>
-<li><strong>Every.org</strong>, the donation platform: a token unique to the email and the sender's address, so a donation can be matched to the email it restores. Every.org is a registered charity and issues the donor's receipt.</li>
-<li><strong>The Give to Reach relay</strong> at go.givetoreach.com, operated by Sergio González: scores, categories, short excerpts with names, companies and links removed, which price and wording variant was shown, a one-way hash of the sender's address, and event timestamps (reply sent, link opened, donation, restore, your reply). Never the message itself.</li>
+<li>Scoring is off until you turn it on in the add-on's settings, and you can turn it off at any time. If you leave it off, nothing about any email goes to Anthropic and the add-on still counts and holds; it simply does not score.</li>
+<li>What is sent: the text of a held pitch, whole and never truncated, with your own name and email address replaced by placeholders before it leaves. The sender's text is sent as they wrote it. The add-on also sends a two-line profile you typed in settings (your role, company stage and industry) so the scorer can judge fit.</li>
+<li>What comes back: scores against a fixed nine-point rubric, a category from a fixed list, what they sell in one line, the sender's role and company size, how the email opened, and short excerpts of the opening line, the credibility claim and the ask with every real name, company and link replaced by a placeholder.</li>
+<li>The pitch is discarded by the add-on after scoring; only the returned fields are kept, in your log. The card shows the original next to the excerpts so you can see for yourself that the placeholders held.</li>
+<li>The request is made straight from your Google account to Anthropic's API using a key that belongs to the add-on, never to you, and it never passes through Sergio's relay.</li>
+<li>Anthropic's own commitments for its API: "By default, we will not use your inputs or outputs from our commercial products (e.g. Claude for Work, Anthropic API, Claude Gov, etc.) to train our models" (<a href="https://privacy.claude.com/en/articles/7996868-is-my-data-used-for-model-training">Anthropic Privacy Center, "Is my data used for model training?"</a>); its commercial terms state that "Anthropic may not train models on Customer Content from Services" (<a href="https://www.anthropic.com/legal/commercial-terms">Anthropic Commercial Terms of Service</a>); and "For Anthropic API users, we automatically delete inputs and outputs on our backend within 30 days of receipt or generation", with exceptions for legal obligations and investigations of abuse (<a href="https://privacy.claude.com/en/articles/7996866-how-long-do-you-store-my-organization-s-data">Anthropic Privacy Center, "How long do you store my organization's data?"</a>, last updated 1 July 2026).</li>
 </ul>
 
-<h2>What it never does</h2>
+<h3>Every.org, the donation platform</h3>
 <ul>
-<li>No human other than you reads your mail. No message body is stored by the add-on, the relay or Sergio.</li>
-<li>Nothing is deleted. Held mail sits under a visible label in your own mailbox.</li>
-<li>No advertising, no sale of personal data, and no use of your mail to train models.</li>
-<li>No access to your mail from any server: the add-on runs on Google's servers as you, and the relay holds no Google permission.</li>
+<li>What is sent: a token unique to the one email being gated, and the sender's email address (pre-filled on the donation form so the receipt can reach them). Nothing about the email's content and nothing about you beyond the fact that a gift with that token restores an email.</li>
+<li>What comes back: a notification that a gift with that token was completed, with the amount and the charity. Every.org, a registered US 501(c)(3) public charity, is the legal recipient of the gift and issues the donor's receipt; its handling of the donor's own details is governed by <a href="https://www.every.org/privacy">Every.org's privacy policy</a>.</li>
 </ul>
 
-<h2>Google API Services User Data Policy</h2>
-<p>Give to Reach's use of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
-
-<h2>Published results</h2>
-<p>Aggregated statistics about cold email received by participants may be published. They never identify a participant or a sender: only pooled counts and rates, with small groups suppressed, and a few hand-picked excerpts with identifying details removed. Participants agree to this when they install, and can opt their data out of anything sold while staying in the free public aggregates.</p>
-
-<h2>Retention and control</h2>
+<h3>The Give to Reach relay at go.givetoreach.com, operated by Sergio González</h3>
 <ul>
-<li>The log the add-on keeps lives in your own Google Drive and is yours to delete.</li>
-<li>The relay keeps scores and events; IP addresses of link clicks are hashed and purged after 30 days.</li>
-<li>A kill switch in the add-on stops all activity at once. Uninstalling the add-on revokes its access to your account.</li>
-<li>Senders can stop all automated replies with one click on the link in the reply.</li>
+<li>What is sent, per gated email: the rubric scores, the category, what they sell in one line, the sender's role and company size, the opening style, the placeholdered excerpts, which price and wording variant was shown, a salted one-way hash of the sender's address, and events with timestamps (reply sent, payment page fetched, link clicked, gift made, thread restored, you replied, sender asked to stop, sender said they know you).</li>
+<li>What is never sent: the message, its subject, the sender's name or address in clear, your own address, your contacts, or anything at all about mail the add-on did not gate.</li>
+<li>What the relay knows about you: an anonymous participant id it assigns when the add-on first enrols, the settings that shape the experiment (which variants you are in), and a daily heartbeat so a silent install is noticed. It holds no Google permission and cannot reach your mailbox.</li>
+<li>The relay also serves the payment page a sender lands on before Every.org, and records that page fetch with the visitor's browser type, the seconds since the reply was sent, and a hashed IP address, so that clicks by link-scanning security software can be told apart from a person.</li>
+<li>Until the relay is running, none of this leaves your account: the link in the reply goes straight to Every.org and the add-on keeps everything in your own log.</li>
 </ul>
-<p><a href="/">Back to Give to Reach</a></p></main></body></html>
+
+<h2 id="never">5. What it never does</h2>
+<ul>
+<li>No human other than you reads your mail. Not Sergio, not anyone. No message body is stored by the add-on, by the relay, or by Sergio, anywhere.</li>
+<li>Nothing is deleted. Held mail is moved out of the inbox under a visible label in your own mailbox and listed on the add-on's card. A restore only ever touches a thread the add-on itself held.</li>
+<li>No advertising, no sale or rental of personal data, no data brokers, no credit or lending use, and no use of your mail or anyone's mail to train AI or machine-learning models, general or otherwise.</li>
+<li>No server reads your mail. The add-on runs on Google's servers as you; the relay holds no Google permission; Sergio never holds a token to your account.</li>
+<li>No permission beyond the eight above, and none of them is used for anything this page does not describe. If that ever needs to change, you will be asked to consent again first.</li>
+<li>It never replies to mail older than two days, never replies to the same sender more than once in seven days or to the same thread more than once, and stops itself at 20 replies an hour and 60 a day.</li>
+</ul>
+
+<h2 id="controls">6. Your controls</h2>
+<ul>
+<li><strong>Shadow mode.</strong> For the first three to five business days after you install, the add-on only labels what it would have held and emails you a daily digest. Nothing is archived and nobody is replied to until you have read the digests, corrected the list of known senders, and switched replies on yourself.</li>
+<li><strong>The held list.</strong> Every held email is on the add-on's card with three buttons: Restore, Mark known, Never gate.</li>
+<li><strong>Scoring is opt-in.</strong> Off until you switch it on; a local-only setting keeps counts flowing to the relay without any scores or excerpts.</li>
+<li><strong>Kill switch.</strong> One switch on the settings card stops all activity at once: no holding, no replies, no calls to any outside service.</li>
+<li><strong>Uninstall.</strong> Uninstalling the add-on revokes every permission above. You can also revoke them at any time from your Google account at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>. Either way your mail simply arrives as normal, and anything still held stays under its label in your mailbox for you to restore by hand.</li>
+<li><strong>Your log</strong> is a spreadsheet in your own Drive. Delete it whenever you like.</li>
+<li><strong>Your relay data.</strong> Write to the contact address with your participant id (shown on the settings card) to have your scores and events deleted from the relay's ledger or excluded from future publication.</li>
+</ul>
+
+<h2 id="retention">7. What is kept, where, and for how long</h2>
+<ul>
+<li><strong>In your Google account:</strong> the log in your Drive (yours, kept until you delete it), the labels on held and restored threads, and the add-on's own bookkeeping (your settings, which messages it has already looked at, when it last replied to each sender), held in Google's storage for the add-on inside your account and never on a server. Uninstalling revokes access to all of it.</li>
+<li><strong>At Anthropic:</strong> the pitch text, for at most the retention period in Anthropic's policy quoted in section 4 (30 days for API traffic, with the stated exceptions). The add-on keeps no copy.</li>
+<li><strong>At Every.org:</strong> whatever a donation normally creates there, under Every.org's own policy.</li>
+<li><strong>At the relay:</strong> scores, categories, excerpts, variant and hashed sender identifiers are kept, because they are the data the experiment and the public results are built from. Hashed IP addresses from payment-page fetches are purged after 30 days. Sender addresses exist there only as a salted one-way hash. Message bodies are never stored there at all.</li>
+</ul>
+
+<h2 id="published">8. Published results</h2>
+<p>Aggregated statistics about the cold email received by participants will be published on a public results page. Four rules govern what appears there.</p>
+<ul>
+<li>Pooled aggregates only: counts, rates and distributions across all participants, never a line per participant unless that participant has agreed to an anonymous line of their own.</li>
+<li>No slice with fewer than about ten emails behind it; until a slice has enough, the page says "too early" instead of showing a number.</li>
+<li>Per-variant breakdowns (which price or wording did better) only after that experiment has closed.</li>
+<li>Excerpts only as a few hand-picked examples, genericized further by hand, never as a feed, and never tied to a date, a participant or a sender.</li>
+</ul>
+<p>Nothing is sold, licensed or shared with anyone for any other purpose. Participants agree to this pooled publication when they install; the anonymous per-participant line is a separate, optional consent.</p>
+
+<h2 id="google">9. Google API Services User Data Policy and Limited Use</h2>
+<div class="disclosure">Give to Reach's use of information received from Google APIs will adhere to <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</div>
+<p>In plain words, that means: data obtained through the permissions above is used only to provide the add-on's own user-facing features described on this page; it is transferred to others only as listed in section 4 (Anthropic with your explicit opt-in, Every.org, and the relay), for security purposes, or to comply with the law; it is never used or transferred for advertising of any kind, never sold to data brokers or information resellers, never used to determine credit-worthiness or for lending; no human reads it other than you, with the sole exceptions of your own explicit request for help and of data that has been aggregated and anonymized; and it is never used to develop, improve or train generalized artificial intelligence or machine-learning models.</p>
+
+<h2 id="senders">10. For senders</h2>
+<p>This section is for someone who emailed a Give to Reach user and received the automated reply. It exists so that you are told, at the moment your data is first handled, who handles it and why.</p>
+<ul>
+<li><strong>Who.</strong> The person you wrote to runs the add-on inside their own mailbox and is responsible for what happens to your email there. Sergio González (<a href="mailto:sergigon@gmail.com">sergigon@gmail.com</a>) operates the add-on and the relay and is responsible for the relay's ledger and the published results.</li>
+<li><strong>What is used, and why.</strong> Your email address: to reply to you in your own thread, to pre-fill the donation form so Every.org can send you a receipt, and, as a salted one-way hash that cannot be turned back into your address, to make sure the same person always sees the same offer and to count repeat senders. Your message: read by the add-on to decide that it was an unsolicited pitch, and, if the recipient has switched scoring on, sent from their account to Anthropic to be scored against a rubric and then discarded; the recipient keeps the scores and short placeholdered excerpts in their own log, and the relay keeps the scores and excerpts with your address hashed. Your message itself is not kept by the add-on, the relay or Sergio, and no human other than the person you wrote to reads it.</li>
+<li><strong>The link.</strong> The reply carries a link unique to your one email. Opening it records that it was opened; giving records that a gift with that token was completed. The gift goes to GiveDirectly through Every.org, a US 501(c)(3) public charity, which sends you the receipt; neither the recipient nor Sergio receives any money.</li>
+<li><strong>Stopping.</strong> One click on the stop link in the reply, or replying with the word STOP, means that mailbox will never send you an automated reply again. If you actually know the person, the "I know you" link in the reply puts your note in front of them instead of an automated process.</li>
+<li><strong>Your rights.</strong> Write to the contact address with the token from your link, or with your email address, to ask what the relay holds about that email, to have it deleted, or to object to its use. Where European data protection law applies, the basis for this handling is the recipient's legitimate interest in managing unsolicited mail and Sergio's in running and publishing the experiment, and you have the rights of access, erasure and objection described above.</li>
+</ul>
+
+<h2 id="changes">11. Changes to this policy</h2>
+<p>If the way the add-on uses Google user data changes, this page will be updated first and you will be asked to consent to the change inside the add-on before any data is used in the new way. The date at the top is the date of the current version.</p>
+
+<h2 id="contact">12. Contact</h2>
+<p>Sergio González, <a href="mailto:sergigon@gmail.com">sergigon@gmail.com</a>. This is a personal project, not a company.</p>
+
+<p><a href="/">Back to Give to Reach</a> · <a href="/terms/">Terms</a></p></main></body></html>
