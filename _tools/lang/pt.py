@@ -4,7 +4,7 @@ T = dict(lang='pt', title='Give to Reach', desc='Um donativo de 2 $ à GiveDirec
   intro='Recebo mais e-mails de primeiro contacto do que consigo ler. Uma pequena ferramenta que construí põe-nos de parte e responde por mim com um único pedido: um donativo de 2 $ à GiveDirectly, como sinal de que o seu e-mail era mesmo para mim.',
   byline='CRO na Talka. Antes, na Stripe, no Twitter e na Google.', linkedin='LinkedIn',
   how='Como funciona',
-  steps=['Um e-mail de um endereço que a minha caixa de entrada ainda não conhece é posto de parte, por ler. Ninguém o lê. Um modelo atribui-lhe uma pontuação, e essa pontuação nunca decide se o leio; quem decide é o donativo.',
+  steps=['Um e-mail de um endereço que a minha caixa de entrada ainda não conhece é posto de parte, por ler. Ninguém o lê.',
          'Recebe uma única nota, na mesma conversa, com uma ligação criada para o seu e-mail.',
          'Faz um donativo de 2 $ à GiveDirectly na Every.org, uma plataforma norte-americana de donativos, sem fins lucrativos. A Every.org envia-lhe o recibo.',
          'A Every.org avisa o Give to Reach de que o donativo foi feito. O seu e-mail regressa à minha caixa de entrada e sou eu que lhe respondo, no prazo de três dias úteis: uma resposta a sério, sim ou não, escrita por mim.'],

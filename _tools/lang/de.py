@@ -4,7 +4,7 @@ T = dict(lang='de', title='Give to Reach', desc='Eine Spende von 2 $ an GiveDire
   intro='Ich bekomme mehr E-Mails von Menschen, die mir zum ersten Mal schreiben, als ich lesen kann. Ein kleines Tool, das ich selbst gebaut habe, legt sie beiseite und antwortet für mich mit einer einzigen Bitte: einer Spende von 2 $ an GiveDirectly, als Zeichen, dass Ihre E-Mail wirklich für mich bestimmt war.',
   byline='CRO bei Talka. Davor bei Stripe, Twitter und Google.', linkedin='LinkedIn',
   how='So funktioniert es',
-  steps=['Eine E-Mail von einer Adresse, die mein Postfach noch nicht kennt, wird ungelesen beiseitegelegt. Kein Mensch liest sie. Ein KI-Modell bewertet sie, doch ob ich sie lese, entscheidet nie die Bewertung, sondern die Spende.',
+  steps=['Eine E-Mail von einer Adresse, die mein Postfach noch nicht kennt, wird ungelesen beiseitegelegt. Kein Mensch liest sie.',
          'Sie bekommen genau eine Nachricht im selben Thread, mit einem Link, der eigens für Ihre E-Mail erstellt wurde.',
          'Sie spenden 2 $ an GiveDirectly auf Every.org, einer gemeinnützigen Spendenplattform aus den USA. Every.org schickt Ihnen die Spendenquittung.',
          'Every.org meldet Give to Reach, dass die Spende eingegangen ist. Ihre E-Mail kommt zurück in mein Postfach, und ich beantworte sie persönlich innerhalb von drei Werktagen: eine echte Antwort, ja oder nein, von mir.'],
