@@ -142,6 +142,8 @@
       <input id="wl-name" type="text" name="name" maxlength="120" autocomplete="name">
       <label for="wl-email">Email</label>
       <input id="wl-email" type="email" name="email" maxlength="200" required autocomplete="email">
+      <label for="wl-linkedin">Your LinkedIn profile</label>
+      <input id="wl-linkedin" type="text" name="linkedin" maxlength="200" required inputmode="url" autocomplete="off" placeholder="linkedin.com/in/..." pattern="\s*(https?://)?([a-z]{1,3}\.)?linkedin\.com/in/[^\s\/?#]+/?([?#].*)?\s*" title="linkedin.com/in/your-name">
       <label for="wl-volume">Roughly how many unsolicited B2B emails do you get a week?</label>
       <select id="wl-volume" name="volume" required>
         <option value="" selected disabled>Choose one</option>
@@ -155,7 +157,7 @@
       <button class="button" type="submit">Join the waitlist</button>
     </form>
     <script>document.querySelector('form.wl input[name="t"]').value = Date.now();</script>
-    <p class="small">Your answers and your address are read by me alone, used only to invite you, and deleted when you ask.</p>
+    <p class="small">Your answers, your address and your profile link are read by me alone, used only to invite you, and deleted when you ask.</p>
   </div>
 
   <footer>

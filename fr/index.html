@@ -142,6 +142,8 @@
       <input id="wl-name" type="text" name="name" maxlength="120" autocomplete="name">
       <label for="wl-email">E-mail</label>
       <input id="wl-email" type="email" name="email" maxlength="200" required autocomplete="email">
+      <label for="wl-linkedin">Votre profil LinkedIn</label>
+      <input id="wl-linkedin" type="text" name="linkedin" maxlength="200" required inputmode="url" autocomplete="off" placeholder="linkedin.com/in/..." pattern="\s*(https?://)?([a-z]{1,3}\.)?linkedin\.com/in/[^\s\/?#]+/?([?#].*)?\s*" title="linkedin.com/in/your-name">
       <label for="wl-volume">Combien d&#x27;e-mails B2B non sollicités recevez-vous par semaine, environ ?</label>
       <select id="wl-volume" name="volume" required>
         <option value="" selected disabled>Choisissez une réponse</option>
@@ -155,7 +157,7 @@
       <button class="button" type="submit">Rejoindre la liste d&#x27;attente</button>
     </form>
     <script>document.querySelector('form.wl input[name="t"]').value = Date.now();</script>
-    <p class="small">Vos réponses et votre adresse ne sont lues que par moi, ne servent qu'à vous inviter et sont supprimées dès que vous le demandez.</p>
+    <p class="small">Vos réponses, votre adresse et le lien vers votre profil ne sont lus que par moi, ne servent qu'à vous inviter et sont supprimés dès que vous le demandez.</p>
   </div>
 
   <footer>

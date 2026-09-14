@@ -20,15 +20,15 @@ VOLUMES = ['lt5', '5to20', '20to50', 'gt50']
 
 # the short labels the native blocks do not carry
 FORM = {
-    'en': dict(name='Name', email='Email', choose='Choose one', opts=['fewer than 5', '5 to 20', '20 to 50', 'more than 50']),
-    'pt': dict(name='Nome', email='E-mail', choose='Escolha uma opção', opts=['menos de 5', '5 a 20', '20 a 50', 'mais de 50']),
-    'es': dict(name='Nombre', email='Correo electrónico', choose='Elige una opción', opts=['menos de 5', 'de 5 a 20', 'de 20 a 50', 'más de 50']),
-    'fr': dict(name='Nom', email='E-mail', choose='Choisissez une réponse', opts=['moins de 5', 'de 5 à 20', 'de 20 à 50', 'plus de 50']),
-    'de': dict(name='Name', email='E-Mail', choose='Bitte auswählen', opts=['weniger als 5', '5 bis 20', '20 bis 50', 'mehr als 50']),
+    'en': dict(name='Name', email='Email', linkedin='Your LinkedIn profile', choose='Choose one', opts=['fewer than 5', '5 to 20', '20 to 50', 'more than 50']),
+    'pt': dict(name='Nome', email='E-mail', linkedin='O seu perfil no LinkedIn', choose='Escolha uma opção', opts=['menos de 5', '5 a 20', '20 a 50', 'mais de 50']),
+    'es': dict(name='Nombre', email='Correo electrónico', linkedin='Tu perfil de LinkedIn', choose='Elige una opción', opts=['menos de 5', 'de 5 a 20', 'de 20 a 50', 'más de 50']),
+    'fr': dict(name='Nom', email='E-mail', linkedin='Votre profil LinkedIn', choose='Choisissez une réponse', opts=['moins de 5', 'de 5 à 20', 'de 20 à 50', 'plus de 50']),
+    'de': dict(name='Name', email='E-Mail', linkedin='Ihr LinkedIn-Profil', choose='Bitte auswählen', opts=['weniger als 5', '5 bis 20', '20 bis 50', 'mehr als 50']),
 }
 EN = dict(button='Join the waitlist',
           body='Roughly how many unsolicited B2B emails do you get a week?\n\nWhy do you want this?\n',
-          small='Your answers and your address are read by me alone, used only to invite you, and deleted when you ask.')
+          small='Your answers, your address and your profile link are read by me alone, used only to invite you, and deleted when you ask.')
 
 FORM_CSS = '''  form.wl { margin-top: 14px; }
   form.wl label { display: block; font-size: 14px; font-weight: 600; color: #1a1a1a; margin: 12px 0 4px; }
@@ -53,6 +53,8 @@ def form_html(code, button, body, f, indent='    '):
 {indent}  <input id="wl-name" type="text" name="name" maxlength="120" autocomplete="name">
 {indent}  <label for="wl-email">{html.escape(f['email'])}</label>
 {indent}  <input id="wl-email" type="email" name="email" maxlength="200" required autocomplete="email">
+{indent}  <label for="wl-linkedin">{html.escape(f['linkedin'])}</label>
+{indent}  <input id="wl-linkedin" type="text" name="linkedin" maxlength="200" required inputmode="url" autocomplete="off" placeholder="linkedin.com/in/..." pattern="\\s*(https?://)?([a-z]{{1,3}}\\.)?linkedin\\.com/in/[^\\s\\/?#]+/?([?#].*)?\\s*" title="linkedin.com/in/your-name">
 {indent}  <label for="wl-volume">{html.escape(q1)}</label>
 {indent}  <select id="wl-volume" name="volume" required>
 {indent}    <option value="" selected disabled>{html.escape(f['choose'])}</option>
@@ -78,9 +80,9 @@ def patch_english(en):
         en = en[:m.start()] + form_html('en', EN['button'], EN['body'], FORM['en']) + f'    <p class="small">{EN["small"]}</p>\n' + en[m.end():]
     else:
         # already a form: refresh it in place (RELAY or labels may have changed)
-        m = re.search(r'    <form class="wl".*?</script>\n', en, re.S)
+        m = re.search(r'    <form class="wl".*?</script>\n    <p class="small">[^\n]*</p>\n', en, re.S)
         assert m, 'no waitlist button or form found in index.html'
-        en = en[:m.start()] + form_html('en', EN['button'], EN['body'], FORM['en']) + en[m.end():]
+        en = en[:m.start()] + form_html('en', EN['button'], EN['body'], FORM['en']) + f'    <p class="small">{EN["small"]}</p>\n' + en[m.end():]
     return en
 
 
@@ -88,7 +90,7 @@ def page(code, t, css):
     steps = ''.join(f'      <li>{s}</li>\n' for s in t['steps'])
     exits = ''.join(f'    <p><strong>{h}</strong> {p}</p>\n' for h, p in t['exits'])
     qa = ''.join(f'      <dt>{q}</dt>\n      <dd>{a}</dd>\n' for q, a in t['qa'])
-    small = t['small'].split('. ', 1)[1]  # the data promise; the two questions are now on the form itself
+    small = t['small']  # the data promise under the form
     return f'''<!DOCTYPE html>
 <html lang="{t['lang']}">
 <head>
