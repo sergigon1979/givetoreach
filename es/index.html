@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Give to Reach</title>
+<meta name="description" content="Un donativo de 2 $ a GiveDirectly, como señal de que tu correo era para mí. Cómo funciona Give to Reach y qué guarda sobre tu correo.">
+<link rel="icon" href="../logo/give-to-reach-logo-32.png">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 17px; line-height: 1.6; color: #1a1a1a; background: #fff; padding: 44px 20px 56px; }
+  img { display: block; max-width: 100%; }
+  a { color: #1b5e20; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 2px; }
+  a:hover { color: #164a1a; }
+  a:focus-visible { outline: 3px solid #2e7d32; outline-offset: 3px; }
+  strong { font-weight: 600; }
+  .container { max-width: 600px; margin: 0 auto; }
+  .lang { text-align: center; font-size: 13px; color: #777; margin-bottom: 18px; }
+  .lang a { color: #777; margin: 0 4px; }
+  .brand { display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 14px; }
+  .brand img { width: 44px; height: 44px; }
+  h1 { font-size: 34px; font-weight: 700; letter-spacing: -0.6px; line-height: 1.1; }
+  .intro { font-size: 19px; line-height: 1.5; color: #3d3d3d; text-align: center; margin: 0 0 22px; }
+  .profile { display: flex; align-items: center; justify-content: center; gap: 14px; margin: 0 0 40px; }
+  .profile img { width: 52px; height: 52px; border-radius: 50%; object-fit: cover; flex: none; }
+  .profile h3 { font-size: 16px; font-weight: 600; line-height: 1.3; }
+  .profile p { font-size: 14px; line-height: 1.45; color: #5f5f5f; }
+  .card { border-top: 1px solid #e4e7e4; padding-top: 26px; margin-bottom: 34px; }
+  .card h2 { font-size: 21px; font-weight: 600; letter-spacing: -0.2px; line-height: 1.3; margin-bottom: 12px; }
+  .card p, .card li { margin-bottom: 12px; }
+  .card p:last-child, .card li:last-child { margin-bottom: 0; }
+  .card ol { padding-left: 22px; }
+  .card.how { border-top: 0; background: #f4f6f4; border-radius: 14px; padding: 24px 26px 22px; margin-bottom: 12px; }
+  .how h2 { margin-bottom: 16px; }
+  .how ol { list-style: none; padding-left: 0; counter-reset: step; }
+  .how li { position: relative; padding-left: 42px; margin-bottom: 14px; counter-increment: step; }
+  .how li::before { content: counter(step); position: absolute; left: 0; top: 0; width: 27px; height: 27px; border-radius: 50%; background: #1b5e20; color: #fff; font-size: 14px; font-weight: 700; line-height: 27px; text-align: center; }
+  .banner { background: #e8f5e9; color: #1b5e20; border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 16px; font-weight: 600; line-height: 1.5; }
+  .faq dt { font-weight: 600; margin-top: 18px; }
+  .faq dt:first-of-type { margin-top: 0; }
+  .faq dd { margin-top: 4px; }
+  .card.waitlist { border: 1px solid #bcd9bf; border-radius: 14px; background: #f7fbf7; padding: 26px 28px; margin-top: 52px; margin-bottom: 0; }
+  .card .eyebrow { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.6px; color: #1b5e20; margin-bottom: 8px; }
+  .button { display: inline-block; background: #1b5e20; color: #fff; text-decoration: none; font-size: 16px; font-weight: 600; line-height: 1.2; padding: 14px 24px; border-radius: 10px; margin: 6px 0 2px; }
+  .button:hover { background: #164a1a; color: #fff; }
+  .small { font-size: 14px; line-height: 1.5; color: #5f5f5f; }
+  footer { margin-top: 44px; padding-top: 20px; border-top: 1px solid #e4e7e4; text-align: center; font-size: 14px; line-height: 1.5; color: #666; }
+  footer p { margin-bottom: 6px; }
+  @media (max-width: 480px) {
+    body { font-size: 16px; padding: 28px 18px 48px; }
+    h1 { font-size: 28px; }
+    .brand img { width: 38px; height: 38px; }
+    .intro { font-size: 17px; text-align: left; margin-bottom: 20px; }
+    .profile { justify-content: flex-start; margin-bottom: 32px; }
+    .card { padding-top: 22px; margin-bottom: 28px; }
+    .card h2 { font-size: 19px; }
+    .card.how { padding: 20px 18px 18px; border-radius: 12px; }
+    .how li { padding-left: 38px; }
+    .how li::before { width: 26px; height: 26px; line-height: 26px; font-size: 13px; }
+    .banner { padding: 12px 16px; font-size: 15px; margin-bottom: 30px; }
+    .card.waitlist { padding: 22px 18px; margin-top: 40px; }
+    .button { display: block; text-align: center; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <p class="lang"><a href="../">English</a> · <span>Español</span> · <a href="../fr/">Français</a> · <a href="../de/">Deutsch</a></p>
+  <div class="brand"><img src="../logo/give-to-reach-logo-128.png" alt=""><h1>Give to Reach</h1></div>
+  <p class="intro">Recibo más correos de desconocidos de los que puedo leer. Una pequeña herramienta que construí los aparta y responde por mí con una sola petición: un donativo de 2 $ a GiveDirectly, como señal de que tu correo era para mí.</p>
+  <div class="profile">
+    <img src="../sergio-320.jpg" alt="Sergio González">
+    <div>
+      <h3>Sergio González</h3>
+      <p>CRO en Talka. Antes, en Stripe, Twitter y Google. <a href="https://www.linkedin.com/in/sgonzalezalonso/" target="_blank" rel="noopener">LinkedIn</a></p>
+    </div>
+  </div>
+
+  <div class="card how">
+    <h2>Cómo funciona</h2>
+    <ol>
+      <li>Un correo desde una dirección nueva para mi bandeja se aparta sin leer. Ninguna persona lo lee. Un modelo lo puntúa, y la puntuación nunca decide si lo leo; el donativo sí.</li>
+      <li>Recibes una única nota en el mismo hilo, con un enlace creado para tu correo.</li>
+      <li>Donas 2 $ a GiveDirectly en Every.org, una plataforma de donaciones sin ánimo de lucro de Estados Unidos. Every.org te envía el recibo.</li>
+      <li>Every.org avisa a Give to Reach de que el donativo se ha completado. Tu correo vuelve a mi bandeja y lo respondo yo mismo en un plazo de tres días laborables: una respuesta de verdad, sí o no, mía.</li>
+    </ol>
+  </div>
+  <div class="banner">Tu donativo va a GiveDirectly a través de Every.org. Nada llega a mí. Al pagar, Every.org ofrece añadir una propina para sí misma; es opcional.</div>
+
+  <div class="card">
+    <h2>Si esta nota no es para ti</h2>
+    <p><strong>¿Cliente, o alguien que conozco?</strong> La nota te ha llegado por error, y lo siento. Responde con una línea y la leeré yo mismo. Un pitch en esa respuesta recibe la misma contestación: el enlace.</p>
+    <p><strong>¿Prefieres no hacerlo?</strong> Sin problema. Tu correo queda apartado, sin leer, así que mi silencio no es una respuesta.</p>
+    <p><strong>¿Escribes otra vez?</strong> Un segundo correo desde la misma dirección no recibe una segunda nota; también se aparta. Un donativo te cubre: después de él, tus siguientes correos llegan directos a mi bandeja.</p>
+  </div>
+
+  <div class="card">
+    <h2>Por qué 2 $, y por qué GiveDirectly</h2>
+    <p>La cantidad es pequeña a propósito. No es una tarifa; es una señal de que querías escribirme a mí y no a una lista. <a href="https://www.givedirectly.org/" target="_blank" rel="noopener">GiveDirectly</a> da dinero en efectivo a familias en pobreza extrema, y sus resultados se han comprobado en <a href="https://www.givedirectly.org/research-at-give-directly/" target="_blank" rel="noopener">ensayos independientes</a>.</p>
+  </div>
+
+  <div class="card">
+    <h2>Qué guarda sobre tu correo</h2>
+    <p>La nota no lleva imágenes ni píxeles de seguimiento. Cuando llega tu correo, su texto pasa a un modelo de IA, Claude de Anthropic, que puntúa su relevancia para mí y devuelve una categoría, unos pocos números y extractos breves con nombres, empresas y enlaces sustituidos por marcadores. El modelo hace la sustitución; yo la reviso. Después, la herramienta descarta el texto.</p>
+    <p>Lo que se guarda, en un pequeño servidor que gestiono yo: esas puntuaciones y extractos, la cantidad que se te mostró, el código del enlace y un hash irreversible de tu dirección. El enlace lleva tu dirección solo para que Every.org pueda enviarte el recibo. Tu correo se queda en mi buzón, apartado; nunca se borra nada. Los resultados se publican solo como recuentos agregados, nunca como un correo, un remitente o una empresa concretos.</p>
+    <p>La <a href="../privacy/">política de privacidad</a> (en inglés) tiene todo el detalle, con una sección escrita para remitentes.</p>
+  </div>
+
+  <div class="card faq">
+    <h2>Preguntas</h2>
+    <dl>
+      <dt>¿Esto es real?</dt>
+      <dd>Sí. Una única respuesta, en tu propio hilo, a un correo que me enviaste. El enlace abre la página de GiveDirectly en Every.org, no una página mía. Si prefieres no usar el enlace, dona en every.org por tu cuenta y responde a la nota con la fecha. La herramienta solo escribe a quien me ha escrito primero, y nunca dos veces a la misma dirección.</dd>
+      <dt>¿De verdad vas a responder?</dt>
+      <dd>Sí. La herramienta me obliga: cuando llega tu donativo, tu correo aparece destacado en mi bandeja con una fecha límite, y respondo en un plazo de tres días laborables.</dd>
+      <dt>¿El dinero va de verdad a la ONG?</dt>
+      <dd>Sí. Every.org recibe el donativo y envía el recibo. Nunca veo tu tarjeta ni toco el dinero.</dd>
+      <dt>He donado y no he sabido nada.</dt>
+      <dd>Responde a la nota con la fecha de tu donativo. Esas las leo yo mismo.</dd>
+    </dl>
+  </div>
+
+  <div class="card waitlist">
+    <p class="eyebrow">Para otras bandejas</p>
+    <h2>¿Lo quieres en tu propia bandeja?</h2>
+    <p>El mismo filtro y la misma página, con tus propios números. Un grupo pequeño va primero.</p>
+    <p><a class="button" href="mailto:sergigon@gmail.com?subject=Lista%20de%20espera%20de%20Give%20to%20Reach&amp;body=%C2%BFCu%C3%A1ntos%20correos%20comerciales%20no%20solicitados%20recibes%20a%20la%20semana%2C%20m%C3%A1s%20o%20menos%3F%0A%0A%C2%BFPor%20qu%C3%A9%20quieres%20esto%3F%0A">Apúntate a la lista de espera</a></p>
+    <p class="small">Dos preguntas, un minuto: cuántos correos comerciales no solicitados recibes a la semana, más o menos, y por qué quieres esto. Tus respuestas y tu dirección las leo solo yo, se usan solo para invitarte y se borran cuando lo pidas.</p>
+  </div>
+
+  <footer>
+    <p><a href="../privacy/">Política de privacidad</a> &middot; <a href="../terms/">Términos</a></p>
+    <p>Give to Reach es un complemento de Gmail que construí y uso en mi propia bandeja. Un proyecto personal, sin relación con Talka. Gestionado por Sergio González, España. Contacto: <a href="mailto:sergigon@gmail.com">sergigon@gmail.com</a>. Última actualización: 14 de septiembre de 2026.</p>
+  </footer>
+</div>
+</body>
+</html>
