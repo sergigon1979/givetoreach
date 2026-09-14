@@ -8,107 +8,130 @@
 <link rel="icon" href="logo/give-to-reach-logo-32.png">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; line-height: 1.6; color: #1a1a1a; background: #fff; padding: 32px 20px 48px; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 17px; line-height: 1.6; color: #1a1a1a; background: #fff; padding: 44px 20px 56px; }
+  img { display: block; max-width: 100%; }
+  a { color: #1b5e20; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 2px; }
+  a:hover { color: #164a1a; }
+  a:focus-visible { outline: 3px solid #2e7d32; outline-offset: 3px; }
+  strong { font-weight: 600; }
   .container { max-width: 600px; margin: 0 auto; }
-  .brand { display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 20px; }
-  .brand img { width: 40px; height: 40px; }
-  h1 { font-size: 36px; font-weight: 700; letter-spacing: -0.5px; text-align: center; }
-  .intro { font-size: 18px; color: #444; text-align: center; margin: 12px 0 36px; }
-  .card { background: #f8f9fa; border-radius: 12px; padding: 26px 28px; margin-bottom: 22px; }
-  .card h2 { font-size: 15px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: #1b5e20; margin-bottom: 14px; }
-  .card ol { margin-left: 22px; }
-  .card li { margin-bottom: 10px; font-size: 16px; }
-  .card p { font-size: 16px; color: #333; margin-bottom: 10px; }
-  .card p:last-child { margin-bottom: 0; }
-  .banner { background: #e8f5e9; color: #1b5e20; border-left: 4px solid #4caf50; border-radius: 8px; padding: 18px 20px; margin-bottom: 22px; font-size: 16px; font-weight: 500; text-align: center; }
-  .faq dt { font-weight: 600; font-size: 16px; margin-top: 14px; }
-  .faq dd { font-size: 16px; color: #333; margin-top: 4px; }
-  .profile { display: flex; align-items: center; gap: 18px; padding: 22px 24px; background: #fafafa; border-radius: 8px; margin: 30px 0 26px; }
-  .profile img { width: 76px; height: 76px; border-radius: 50%; object-fit: cover; }
-  .profile h3 { font-size: 19px; font-weight: 600; }
-  .profile p { font-size: 14px; color: #666; }
-  a { color: #1b5e20; }
-  .waitlist { background: #eef6ee; }
-  .button { display: inline-block; background: #1b5e20; color: #fff; text-decoration: none; font-weight: 600; padding: 12px 22px; border-radius: 8px; margin: 6px 0 4px; }
-  .button:hover { background: #164a1a; }
-  .small { font-size: 14px; color: #555; }
-  footer { text-align: center; font-size: 14px; color: #666; }
+  .lang { text-align: center; font-size: 13px; color: #777; margin-bottom: 18px; }
+  .lang a { color: #777; margin: 0 4px; }
+  .brand { display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 14px; }
+  .brand img { width: 44px; height: 44px; }
+  h1 { font-size: 34px; font-weight: 700; letter-spacing: -0.6px; line-height: 1.1; }
+  .intro { font-size: 19px; line-height: 1.5; color: #3d3d3d; text-align: center; margin: 0 0 22px; }
+  .profile { display: flex; align-items: center; justify-content: center; gap: 14px; margin: 0 0 40px; }
+  .profile img { width: 52px; height: 52px; border-radius: 50%; object-fit: cover; flex: none; }
+  .profile h3 { font-size: 16px; font-weight: 600; line-height: 1.3; }
+  .profile p { font-size: 14px; line-height: 1.45; color: #5f5f5f; }
+  .card { border-top: 1px solid #e4e7e4; padding-top: 26px; margin-bottom: 34px; }
+  .card h2 { font-size: 21px; font-weight: 600; letter-spacing: -0.2px; line-height: 1.3; margin-bottom: 12px; }
+  .card p, .card li { margin-bottom: 12px; }
+  .card p:last-child, .card li:last-child { margin-bottom: 0; }
+  .card ol { padding-left: 22px; }
+  .card.how { border-top: 0; background: #f4f6f4; border-radius: 14px; padding: 24px 26px 22px; margin-bottom: 12px; }
+  .how h2 { margin-bottom: 16px; }
+  .how ol { list-style: none; padding-left: 0; counter-reset: step; }
+  .how li { position: relative; padding-left: 42px; margin-bottom: 14px; counter-increment: step; }
+  .how li::before { content: counter(step); position: absolute; left: 0; top: 0; width: 27px; height: 27px; border-radius: 50%; background: #1b5e20; color: #fff; font-size: 14px; font-weight: 700; line-height: 27px; text-align: center; }
+  .banner { background: #e8f5e9; color: #1b5e20; border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 16px; font-weight: 600; line-height: 1.5; }
+  .faq dt { font-weight: 600; margin-top: 18px; }
+  .faq dt:first-of-type { margin-top: 0; }
+  .faq dd { margin-top: 4px; }
+  .card.waitlist { border: 1px solid #bcd9bf; border-radius: 14px; background: #f7fbf7; padding: 26px 28px; margin-top: 52px; margin-bottom: 0; }
+  .card .eyebrow { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.6px; color: #1b5e20; margin-bottom: 8px; }
+  .button { display: inline-block; background: #1b5e20; color: #fff; text-decoration: none; font-size: 16px; font-weight: 600; line-height: 1.2; padding: 14px 24px; border-radius: 10px; margin: 6px 0 2px; }
+  .button:hover { background: #164a1a; color: #fff; }
+  .small { font-size: 14px; line-height: 1.5; color: #5f5f5f; }
+  footer { margin-top: 44px; padding-top: 20px; border-top: 1px solid #e4e7e4; text-align: center; font-size: 14px; line-height: 1.5; color: #666; }
   footer p { margin-bottom: 6px; }
-  @media (max-width: 480px) { h1 { font-size: 30px; } .card { padding: 20px; } .profile { flex-direction: column; text-align: center; } }
+  @media (max-width: 480px) {
+    body { font-size: 16px; padding: 28px 18px 48px; }
+    h1 { font-size: 28px; }
+    .brand img { width: 38px; height: 38px; }
+    .intro { font-size: 17px; text-align: left; margin-bottom: 20px; }
+    .profile { justify-content: flex-start; margin-bottom: 32px; }
+    .card { padding-top: 22px; margin-bottom: 28px; }
+    .card h2 { font-size: 19px; }
+    .card.how { padding: 20px 18px 18px; border-radius: 12px; }
+    .how li { padding-left: 38px; }
+    .how li::before { width: 26px; height: 26px; line-height: 26px; font-size: 13px; }
+    .banner { padding: 12px 16px; font-size: 15px; margin-bottom: 30px; }
+    .card.waitlist { padding: 22px 18px; margin-top: 40px; }
+    .button { display: block; text-align: center; }
+  }
 </style>
 </head>
 <body>
 <div class="container">
+  <p class="lang"><span>English</span> · <a href="es/">Español</a> · <a href="fr/">Français</a> · <a href="de/">Deutsch</a></p>
   <div class="brand"><img src="logo/give-to-reach-logo-128.png" alt=""><h1>Give to Reach</h1></div>
-  <p class="intro">I get more first-time email than I can read. A small tool I built sets it aside and answers for me with one request: a $2 gift to GiveDirectly, as a sign that your email was meant for me.</p>
+  <p class="intro">I get more first-time email than I can read. A small tool I built sets it aside and replies for me with one request: a $2 gift to GiveDirectly, as a sign that your email was meant for me.</p>
+  <div class="profile">
+    <img src="sergio-320.jpg" alt="Sergio González">
+    <div>
+      <h3>Sergio González</h3>
+      <p>CRO at Talka. Before that, Stripe, Twitter and Google. <a href="https://www.linkedin.com/in/sgonzalezalonso/" target="_blank" rel="noopener">LinkedIn</a></p>
+    </div>
+  </div>
 
-  <div class="card">
+  <div class="card how">
     <h2>How it works</h2>
     <ol>
-      <li>An email from an address I have never written to is set aside before I see it. No person reads it.</li>
-      <li>You get a note in the same thread, with a link made for your email.</li>
-      <li>You give $2 to GiveDirectly on every.org, a US nonprofit donation platform. Every.org sends you the receipt. None of the money comes to me.</li>
-      <li>Every.org tells Give to Reach that the gift went through, your email comes back to my inbox, and I answer it myself within three business days.</li>
+      <li>An email from an address that is new to my inbox is set aside, unread. No person reads it. A model scores it, and the score never decides whether I read it; the gift does.</li>
+      <li>You get one note in the same thread, with a link made for your email.</li>
+      <li>You give $2 to GiveDirectly on Every.org, a US nonprofit donation platform. Every.org sends you the receipt.</li>
+      <li>Every.org tells Give to Reach the gift went through. Your email comes back to my inbox, and I answer it myself within three business days: a real answer, yes or no, from me.</li>
     </ol>
   </div>
+  <div class="banner">Your gift goes to GiveDirectly through Every.org. None of it comes to me. At checkout, Every.org offers to add a tip for itself; that is optional.</div>
 
   <div class="card">
-    <h2>If you are a client, or someone I know</h2>
-    <p>The note reached you by mistake, and I am sorry. Reply to it with one line. I read every answer to the note myself.</p>
+    <h2>If this note is not for you</h2>
+    <p><strong>A client, or someone I know?</strong> The note reached you by mistake, and I am sorry. Reply to it with one line and I will read it myself. A pitch in that reply gets the same answer: the link.</p>
+    <p><strong>Would rather not?</strong> No hard feelings. Your email stays set aside, unread, so my silence is not an answer.</p>
+    <p><strong>Writing again?</strong> A second email from the same address gets no second note; it is set aside too. One gift covers you: after it, your later emails come straight to my inbox.</p>
   </div>
-
-  <div class="card">
-    <h2>If you would rather not</h2>
-    <p>No hard feelings. I will not have seen your email, so read nothing into my silence.</p>
-  </div>
-
-  <div class="banner">100% of your gift goes to GiveDirectly, through Every.org. Nothing passes through me.</div>
 
   <div class="card">
     <h2>Why $2, and why GiveDirectly</h2>
-    <p>The amount is small on purpose. What I am asking for is a minute of your intent, not your money. <a href="https://www.givedirectly.org/" target="_blank" rel="noopener">GiveDirectly</a> sends money directly to families in extreme poverty, and it is one of the most closely studied charities in the world.</p>
-    <p>Every.org may offer to add a tip for its own costs. That is optional, and you can set it to zero.</p>
+    <p>The amount is small on purpose. It is not a fee; it is a sign that you meant to write to me and not to a list. <a href="https://www.givedirectly.org/" target="_blank" rel="noopener">GiveDirectly</a> gives cash to families in extreme poverty, and its results have been tested in <a href="https://www.givedirectly.org/research-at-give-directly/" target="_blank" rel="noopener">independent trials</a>.</p>
   </div>
 
   <div class="card">
     <h2>What it keeps about your email</h2>
-    <p>The note has no images and no tracking pixels. Give to Reach reads your email once with an AI model to score how relevant it is to me: a category, a few numbers, and short excerpts with every name, company and link replaced by a placeholder. It keeps those, the code in the link, and a one-way hash of your address. It does not keep your email's text, and it never deletes anything in my mailbox.</p>
-    <p>The full detail, including the section written for senders, is in the <a href="privacy/">privacy policy</a>.</p>
+    <p>The note has no images and no tracking pixels. When your email arrives, its text goes to an AI model, Anthropic's Claude, which scores how relevant it is to me and returns a category, a few numbers, and short excerpts with names, companies and links replaced by placeholders. The model does the replacing; I check it. The tool then discards the text.</p>
+    <p>What is kept, on a small server I run: those scores and excerpts, the amount you were shown, the code in the link, and a one-way hash of your address. The link itself carries your address only so Every.org can send you the receipt. Your email stays in my mailbox, set aside; nothing is ever deleted. Results are published only as pooled counts, never as a single email, sender or company.</p>
+    <p>The <a href="privacy/">privacy policy</a> has the full detail, with a section written for senders.</p>
   </div>
 
   <div class="card faq">
     <h2>Questions</h2>
     <dl>
-      <dt>Is this spam?</dt>
-      <dd>No. It is one reply, in your own thread, to an email you sent me. Nobody who did not write first ever hears from it, and it never writes to the same person twice.</dd>
+      <dt>Is this real?</dt>
+      <dd>Yes. One reply, in your own thread, to an email you sent me. The link opens GiveDirectly's page on Every.org, not a page of mine. If you would rather not use the link, give on every.org yourself and reply to the note with the date. The tool writes only to people who wrote to me first, and never twice to the same address.</dd>
       <dt>Will you actually reply?</dt>
-      <dd>Yes. The tool tracks the promise: when your gift lands, your email is starred in my inbox with a deadline, and I answer within three business days.</dd>
+      <dd>Yes. The tool holds me to it: when your gift lands, your email is starred in my inbox with a deadline, and I answer within three business days.</dd>
       <dt>Is the money really going to charity?</dt>
-      <dd>Yes. The link opens on Every.org, a registered US nonprofit, on GiveDirectly's own page. Every.org takes the gift and issues the receipt. I never see a card and never touch the money.</dd>
+      <dd>Yes. Every.org takes the gift and sends the receipt. I never see your card and never touch the money.</dd>
       <dt>I gave and heard nothing.</dt>
-      <dd>Reply to the note with your receipt. I read every answer to it myself.</dd>
+      <dd>Reply to the note with the date of your gift. I read those myself.</dd>
     </dl>
   </div>
 
   <div class="card waitlist">
-    <h2>Want your own Give to Reach?</h2>
-    <p>The same filter and the same page, on your own inbox, with your own numbers: how much unsolicited outreach you get, how much of it is worth reading, and how you compare with everyone else in the panel. A small group is going first.</p>
-    <p><a class="button" href="WAITLIST_FORM_URL" target="_blank" rel="noopener">Join the waitlist</a></p>
-    <p class="small">Two questions, one minute: roughly how many unsolicited B2B emails you get a week, and why you want this.</p>
-  </div>
-
-  <div class="profile">
-    <img src="sergio-320.jpg" alt="Sergio González">
-    <div>
-      <h3>Sergio González</h3>
-      <p>CRO at Talka. Former Stripe, Twitter, Google.</p>
-      <p><a href="https://www.linkedin.com/in/sgonzalezalonso/" target="_blank" rel="noopener">LinkedIn</a></p>
-    </div>
+    <p class="eyebrow">For other inboxes</p>
+    <h2>Want this on your own inbox?</h2>
+    <p>The same filter and the same page, with your own numbers. A small group is going first.</p>
+    <p><a class="button" href="mailto:sergigon@gmail.com?subject=Give%20to%20Reach%20waitlist&amp;body=Roughly%20how%20many%20unsolicited%20B2B%20emails%20do%20you%20get%20a%20week%3F%0A%0AWhy%20do%20you%20want%20this%3F%0A">Join the waitlist</a></p>
+    <p class="small">Two questions, one minute: roughly how many unsolicited B2B emails you get a week, and why you want this. Your answers and your address are read by me alone, used only to invite you, and deleted when you ask.</p>
   </div>
 
   <footer>
     <p><a href="privacy/">Privacy policy</a> &middot; <a href="terms/">Terms</a></p>
-    <p>Give to Reach is a Gmail add-on Sergio built and runs on his own inbox.</p>
+    <p>Give to Reach is a Gmail add-on I built and run on my own inbox. A personal project, not connected to Talka. Run by Sergio González, Spain. Contact: <a href="mailto:sergigon@gmail.com">sergigon@gmail.com</a>. Last updated 14 September 2026.</p>
   </footer>
 </div>
 </body>
