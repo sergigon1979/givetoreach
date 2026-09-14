@@ -1,48 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Nothing for you here 🤖</title>
-    <meta name="robots" content="noindex,nofollow">
-    <style>
-      body {
-        font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-        margin: 0;
-        background-color: #000;
-        color: #9effff;
-        flex-direction: column;
-      }
-      h1 {
-        font-size: 24px;
-        font-weight: 600;
-        margin: 0;
-      }
-      .emoji {
-        font-size: 64px;
-        margin-bottom: 16px;
-      }
-      footer {
-        position: fixed;
-        bottom: 16px;
-        left: 0;
-        right: 0;
-        text-align: center;
-        font-size: 13px;
-        color: #9effff;
-      }
-      footer a {
-        color: #9effff;
-        text-decoration: underline;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="emoji">🛸</div>
-    <h1>Nothing for you here, mate.</h1>
-    <footer><a href="/privacy/">Privacy policy</a> · <a href="/terms/">Terms</a></footer>
-  </body>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Give to Reach</title>
+<meta name="description" content="A $2 gift to GiveDirectly, as a sign that your email was meant for me. How Give to Reach works, and what it keeps about your email.">
+<link rel="icon" href="logo/give-to-reach-logo-32.png">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; line-height: 1.6; color: #1a1a1a; background: #fff; padding: 32px 20px 48px; }
+  .container { max-width: 600px; margin: 0 auto; }
+  .brand { display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 20px; }
+  .brand img { width: 40px; height: 40px; }
+  h1 { font-size: 36px; font-weight: 700; letter-spacing: -0.5px; text-align: center; }
+  .intro { font-size: 18px; color: #444; text-align: center; margin: 12px 0 36px; }
+  .card { background: #f8f9fa; border-radius: 12px; padding: 26px 28px; margin-bottom: 22px; }
+  .card h2 { font-size: 15px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: #1b5e20; margin-bottom: 14px; }
+  .card ol { margin-left: 22px; }
+  .card li { margin-bottom: 10px; font-size: 16px; }
+  .card p { font-size: 16px; color: #333; margin-bottom: 10px; }
+  .card p:last-child { margin-bottom: 0; }
+  .banner { background: #e8f5e9; color: #1b5e20; border-left: 4px solid #4caf50; border-radius: 8px; padding: 18px 20px; margin-bottom: 22px; font-size: 16px; font-weight: 500; text-align: center; }
+  .faq dt { font-weight: 600; font-size: 16px; margin-top: 14px; }
+  .faq dd { font-size: 16px; color: #333; margin-top: 4px; }
+  .profile { display: flex; align-items: center; gap: 18px; padding: 22px 24px; background: #fafafa; border-radius: 8px; margin: 30px 0 26px; }
+  .profile img { width: 76px; height: 76px; border-radius: 50%; object-fit: cover; }
+  .profile h3 { font-size: 19px; font-weight: 600; }
+  .profile p { font-size: 14px; color: #666; }
+  a { color: #1b5e20; }
+  footer { text-align: center; font-size: 14px; color: #666; }
+  footer p { margin-bottom: 6px; }
+  @media (max-width: 480px) { h1 { font-size: 30px; } .card { padding: 20px; } .profile { flex-direction: column; text-align: center; } }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="brand"><img src="logo/give-to-reach-logo-128.png" alt=""><h1>Give to Reach</h1></div>
+  <p class="intro">I get more first-time email than I can read. A small tool I built sets it aside and answers for me with one request: a $2 gift to GiveDirectly, as a sign that your email was meant for me.</p>
+
+  <div class="card">
+    <h2>How it works</h2>
+    <ol>
+      <li>An email from an address I have never written to is set aside before I see it. No person reads it.</li>
+      <li>You get a note in the same thread, with a link made for your email.</li>
+      <li>You give $2 to GiveDirectly on every.org, a US nonprofit donation platform. Every.org sends you the receipt. None of the money comes to me.</li>
+      <li>Every.org tells Give to Reach that the gift went through, your email comes back to my inbox, and I answer it myself within three business days.</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h2>If you are a client, or someone I know</h2>
+    <p>The note reached you by mistake, and I am sorry. Reply to it with one line. I read every answer to the note myself.</p>
+  </div>
+
+  <div class="card">
+    <h2>If you would rather not</h2>
+    <p>No hard feelings. I will not have seen your email, so read nothing into my silence.</p>
+  </div>
+
+  <div class="banner">100% of your gift goes to GiveDirectly, through Every.org. Nothing passes through me.</div>
+
+  <div class="card">
+    <h2>Why $2, and why GiveDirectly</h2>
+    <p>The amount is small on purpose. What I am asking for is a minute of your intent, not your money. <a href="https://www.givedirectly.org/" target="_blank" rel="noopener">GiveDirectly</a> sends money directly to families in extreme poverty, and it is one of the most closely studied charities in the world.</p>
+    <p>Every.org may offer to add a tip for its own costs. That is optional, and you can set it to zero.</p>
+  </div>
+
+  <div class="card">
+    <h2>What it keeps about your email</h2>
+    <p>The note has no images and no tracking pixels. Give to Reach reads your email once with an AI model to score how relevant it is to me: a category, a few numbers, and short excerpts with every name, company and link replaced by a placeholder. It keeps those, the code in the link, and a one-way hash of your address. It does not keep your email's text, and it never deletes anything in my mailbox.</p>
+    <p>The full detail, including the section written for senders, is in the <a href="privacy/">privacy policy</a>.</p>
+  </div>
+
+  <div class="card faq">
+    <h2>Questions</h2>
+    <dl>
+      <dt>Is this spam?</dt>
+      <dd>No. It is one reply, in your own thread, to an email you sent me. Nobody who did not write first ever hears from it, and it never writes to the same person twice.</dd>
+      <dt>Will you actually reply?</dt>
+      <dd>Yes. The tool tracks the promise: when your gift lands, your email is starred in my inbox with a deadline, and I answer within three business days.</dd>
+      <dt>Is the money really going to charity?</dt>
+      <dd>Yes. The link opens on Every.org, a registered US nonprofit, on GiveDirectly's own page. Every.org takes the gift and issues the receipt. I never see a card and never touch the money.</dd>
+      <dt>I gave and heard nothing.</dt>
+      <dd>Reply to the note with your receipt. I read every answer to it myself.</dd>
+    </dl>
+  </div>
+
+  <div class="profile">
+    <img src="sergio3.png" alt="Sergio González">
+    <div>
+      <h3>Sergio González</h3>
+      <p>CRO at Talka. Former Stripe, Twitter, Google.</p>
+      <p><a href="https://www.linkedin.com/in/sgonzalezalonso/" target="_blank" rel="noopener">LinkedIn</a></p>
+    </div>
+  </div>
+
+  <footer>
+    <p><a href="privacy/">Privacy policy</a> &middot; <a href="terms/">Terms</a></p>
+    <p>Give to Reach is a Gmail add-on Sergio built and runs on his own inbox.</p>
+  </footer>
+</div>
+</body>
 </html>
