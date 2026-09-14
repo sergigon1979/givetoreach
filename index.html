@@ -45,6 +45,14 @@
   .button { display: inline-block; background: #1b5e20; color: #fff; text-decoration: none; font-size: 16px; font-weight: 600; line-height: 1.2; padding: 14px 24px; border-radius: 10px; margin: 6px 0 2px; }
   .button:hover { background: #164a1a; color: #fff; }
   .small { font-size: 14px; line-height: 1.5; color: #5f5f5f; }
+  form.wl { margin-top: 14px; }
+  form.wl label { display: block; font-size: 14px; font-weight: 600; color: #1a1a1a; margin: 12px 0 4px; }
+  form.wl input, form.wl select, form.wl textarea { width: 100%; font: inherit; font-size: 16px; color: #1a1a1a; background: #fff; border: 1px solid #bcd9bf; border-radius: 8px; padding: 10px 12px; }
+  form.wl textarea { min-height: 84px; resize: vertical; }
+  form.wl input:focus, form.wl select:focus, form.wl textarea:focus { outline: 2px solid #1b5e20; outline-offset: 1px; border-color: #1b5e20; }
+  form.wl .hp { position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden; }
+  form.wl button.button { border: 0; cursor: pointer; font-family: inherit; margin-top: 16px; }
+  form.wl + .small { margin-top: 12px; }
   footer { margin-top: 44px; padding-top: 20px; border-top: 1px solid #e4e7e4; text-align: center; font-size: 14px; line-height: 1.5; color: #666; }
   footer p { margin-bottom: 6px; }
   @media (max-width: 480px) {
@@ -61,6 +69,7 @@
     .banner { padding: 12px 16px; font-size: 15px; margin-bottom: 30px; }
     .card.waitlist { padding: 22px 18px; margin-top: 40px; }
     .button { display: block; text-align: center; }
+    form.wl button.button { width: 100%; }
   }
 </style>
 </head>
@@ -125,8 +134,28 @@
     <p class="eyebrow">For other inboxes</p>
     <h2>Want this on your own inbox?</h2>
     <p>The same filter and the same page, with your own numbers. A small group is going first.</p>
-    <p><a class="button" href="mailto:sergigon@gmail.com?subject=Give%20to%20Reach%20waitlist&amp;body=Roughly%20how%20many%20unsolicited%20B2B%20emails%20do%20you%20get%20a%20week%3F%0A%0AWhy%20do%20you%20want%20this%3F%0A">Join the waitlist</a></p>
-    <p class="small">Two questions, one minute: roughly how many unsolicited B2B emails you get a week, and why you want this. Your answers and your address are read by me alone, used only to invite you, and deleted when you ask.</p>
+    <form class="wl" method="post" action="https://give-to-reach-relay.REPLACE-AFTER-DEPLOY.workers.dev/waitlist">
+      <input type="hidden" name="lang" value="en">
+      <input type="hidden" name="t" value="">
+      <p class="hp" aria-hidden="true"><label>Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label></p>
+      <label for="wl-name">Name</label>
+      <input id="wl-name" type="text" name="name" maxlength="120" autocomplete="name">
+      <label for="wl-email">Email</label>
+      <input id="wl-email" type="email" name="email" maxlength="200" required autocomplete="email">
+      <label for="wl-volume">Roughly how many unsolicited B2B emails do you get a week?</label>
+      <select id="wl-volume" name="volume" required>
+        <option value="" selected disabled>Choose one</option>
+        <option value="lt5">fewer than 5</option>
+        <option value="5to20">5 to 20</option>
+        <option value="20to50">20 to 50</option>
+        <option value="gt50">more than 50</option>
+      </select>
+      <label for="wl-why">Why do you want this?</label>
+      <textarea id="wl-why" name="why" maxlength="1000" rows="3" required></textarea>
+      <button class="button" type="submit">Join the waitlist</button>
+    </form>
+    <script>document.querySelector('form.wl input[name="t"]').value = Date.now();</script>
+    <p class="small">Your answers and your address are read by me alone, used only to invite you, and deleted when you ask.</p>
   </div>
 
   <footer>

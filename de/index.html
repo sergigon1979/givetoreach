@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Give to Reach</title>
-<meta name="description" content="Eine Spende von 2 $ an GiveDirectly, als Zeichen, dass Ihre E-Mail an mich gerichtet war. Wie Give to Reach funktioniert und was es über Ihre E-Mail behält.">
+<meta name="description" content="Eine Spende von 2 $ an GiveDirectly als Zeichen, dass Ihre E-Mail wirklich für mich bestimmt war. Wie Give to Reach funktioniert und was von Ihrer E-Mail gespeichert wird.">
 <link rel="icon" href="../logo/give-to-reach-logo-32.png">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -45,6 +45,14 @@
   .button { display: inline-block; background: #1b5e20; color: #fff; text-decoration: none; font-size: 16px; font-weight: 600; line-height: 1.2; padding: 14px 24px; border-radius: 10px; margin: 6px 0 2px; }
   .button:hover { background: #164a1a; color: #fff; }
   .small { font-size: 14px; line-height: 1.5; color: #5f5f5f; }
+  form.wl { margin-top: 14px; }
+  form.wl label { display: block; font-size: 14px; font-weight: 600; color: #1a1a1a; margin: 12px 0 4px; }
+  form.wl input, form.wl select, form.wl textarea { width: 100%; font: inherit; font-size: 16px; color: #1a1a1a; background: #fff; border: 1px solid #bcd9bf; border-radius: 8px; padding: 10px 12px; }
+  form.wl textarea { min-height: 84px; resize: vertical; }
+  form.wl input:focus, form.wl select:focus, form.wl textarea:focus { outline: 2px solid #1b5e20; outline-offset: 1px; border-color: #1b5e20; }
+  form.wl .hp { position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden; }
+  form.wl button.button { border: 0; cursor: pointer; font-family: inherit; margin-top: 16px; }
+  form.wl + .small { margin-top: 12px; }
   footer { margin-top: 44px; padding-top: 20px; border-top: 1px solid #e4e7e4; text-align: center; font-size: 14px; line-height: 1.5; color: #666; }
   footer p { margin-bottom: 6px; }
   @media (max-width: 480px) {
@@ -61,6 +69,7 @@
     .banner { padding: 12px 16px; font-size: 15px; margin-bottom: 30px; }
     .card.waitlist { padding: 22px 18px; margin-top: 40px; }
     .button { display: block; text-align: center; }
+    form.wl button.button { width: 100%; }
   }
 </style>
 </head>
@@ -68,7 +77,7 @@
 <div class="container">
   <p class="lang"><a href="../">English</a> · <a href="../pt/">Português</a> · <a href="../es/">Español</a> · <a href="../fr/">Français</a> · <span>Deutsch</span></p>
   <div class="brand"><img src="../logo/give-to-reach-logo-128.png" alt=""><h1>Give to Reach</h1></div>
-  <p class="intro">Ich bekomme mehr Erst-E-Mails, als ich lesen kann. Ein kleines Werkzeug, das ich gebaut habe, legt sie beiseite und antwortet für mich mit einer einzigen Bitte: einer Spende von 2 $ an GiveDirectly, als Zeichen, dass Ihre E-Mail wirklich an mich gerichtet war.</p>
+  <p class="intro">Ich bekomme mehr E-Mails von Menschen, die mir zum ersten Mal schreiben, als ich lesen kann. Ein kleines Tool, das ich selbst gebaut habe, legt sie beiseite und antwortet für mich mit einer einzigen Bitte: einer Spende von 2 $ an GiveDirectly, als Zeichen, dass Ihre E-Mail wirklich für mich bestimmt war.</p>
   <div class="profile">
     <img src="../sergio-320.jpg" alt="Sergio González">
     <div>
@@ -80,56 +89,78 @@
   <div class="card how">
     <h2>So funktioniert es</h2>
     <ol>
-      <li>Eine E-Mail von einer Adresse, die mein Postfach nicht kennt, wird ungelesen beiseitegelegt. Kein Mensch liest sie. Ein Modell bewertet sie, und diese Bewertung entscheidet nie, ob ich sie lese; das tut die Spende.</li>
-      <li>Sie erhalten eine einzige Nachricht im selben Thread, mit einem Link, der für Ihre E-Mail erstellt wurde.</li>
-      <li>Sie spenden 2 $ an GiveDirectly auf Every.org, einer gemeinnützigen Spendenplattform aus den USA. Every.org schickt Ihnen die Quittung.</li>
-      <li>Every.org meldet Give to Reach, dass die Spende angekommen ist. Ihre E-Mail kehrt in mein Postfach zurück, und ich beantworte sie selbst innerhalb von drei Werktagen: eine echte Antwort, ja oder nein, von mir.</li>
+      <li>Eine E-Mail von einer Adresse, die mein Postfach noch nicht kennt, wird ungelesen beiseitegelegt. Kein Mensch liest sie. Ein KI-Modell bewertet sie, doch ob ich sie lese, entscheidet nie die Bewertung, sondern die Spende.</li>
+      <li>Sie bekommen genau eine Nachricht im selben Thread, mit einem Link, der eigens für Ihre E-Mail erstellt wurde.</li>
+      <li>Sie spenden 2 $ an GiveDirectly auf Every.org, einer gemeinnützigen Spendenplattform aus den USA. Every.org schickt Ihnen die Spendenquittung.</li>
+      <li>Every.org meldet Give to Reach, dass die Spende eingegangen ist. Ihre E-Mail kommt zurück in mein Postfach, und ich beantworte sie persönlich innerhalb von drei Werktagen: eine echte Antwort, ja oder nein, von mir.</li>
     </ol>
   </div>
-  <div class="banner">Ihre Spende geht über Every.org an GiveDirectly. Nichts davon kommt bei mir an. Beim Bezahlen bietet Every.org an, ein Trinkgeld für sich selbst hinzuzufügen; das ist freiwillig.</div>
+  <div class="banner">Ihre Spende geht über Every.org an GiveDirectly. Bei mir kommt nichts davon an. Beim Bezahlen fragt Every.org, ob Sie der Plattform selbst noch ein Trinkgeld geben möchten; das ist freiwillig.</div>
 
   <div class="card">
-    <h2>Wenn diese Nachricht nicht für Sie gedacht ist</h2>
-    <p><strong>Kunde oder jemand, den ich kenne?</strong> Die Nachricht hat Sie irrtümlich erreicht, und das tut mir leid. Antworten Sie mit einer Zeile, und ich lese sie selbst. Ein Verkaufsangebot in dieser Antwort bekommt dieselbe Antwort: den Link.</p>
-    <p><strong>Lieber nicht?</strong> Kein Problem. Ihre E-Mail bleibt ungelesen beiseite, mein Schweigen ist also keine Antwort.</p>
-    <p><strong>Sie schreiben noch einmal?</strong> Eine zweite E-Mail von derselben Adresse bekommt keine zweite Nachricht; sie wird ebenfalls beiseitegelegt. Eine Spende genügt: Danach landen Ihre weiteren E-Mails direkt in meinem Postfach.</p>
+    <h2>Falls diese Nachricht nicht für Sie gedacht ist</h2>
+    <p><strong>Sie sind Kunde, oder wir kennen uns schon?</strong> Dann ist die Nachricht versehentlich bei Ihnen gelandet, und das tut mir leid. Antworten Sie darauf mit einer Zeile, und ich lese sie persönlich. Steckt in dieser Antwort ein Verkaufsangebot, bekommt es wieder dieselbe Antwort: den Link.</p>
+    <p><strong>Lieber nicht?</strong> Kein Problem. Ihre E-Mail bleibt dann ungelesen beiseitegelegt; mein Schweigen ist also keine Antwort.</p>
+    <p><strong>Sie schreiben noch einmal?</strong> Eine zweite E-Mail von derselben Adresse bekommt keine zweite Nachricht; sie wird ebenfalls beiseitegelegt. Eine einzige Spende genügt: Danach landen alle Ihre weiteren E-Mails direkt in meinem Postfach.</p>
   </div>
 
   <div class="card">
     <h2>Warum 2 $, und warum GiveDirectly</h2>
-    <p>Der Betrag ist mit Absicht klein. Er ist keine Gebühr, sondern ein Zeichen, dass Sie mir schreiben wollten und nicht einer Liste. <a href="https://www.givedirectly.org/" target="_blank" rel="noopener">GiveDirectly</a> gibt Bargeld an Familien in extremer Armut, und seine Wirkung wurde in <a href="https://www.givedirectly.org/research-at-give-directly/" target="_blank" rel="noopener">unabhängigen Studien</a> geprüft.</p>
+    <p>Der Betrag ist bewusst klein. Er ist keine Gebühr, sondern ein Zeichen, dass Sie an mich schreiben wollten und nicht an eine Liste. <a href="https://www.givedirectly.org/" target="_blank" rel="noopener">GiveDirectly</a> gibt Bargeld an Familien in extremer Armut, und die Wirkung ist in <a href="https://www.givedirectly.org/research-at-give-directly/" target="_blank" rel="noopener">unabhängigen Studien</a> überprüft worden.</p>
   </div>
 
   <div class="card">
-    <h2>Was es über Ihre E-Mail behält</h2>
-    <p>Die Nachricht enthält keine Bilder und keine Tracking-Pixel. Ein KI-Modell bewertet, wie relevant Ihre E-Mail ist. Was behalten wird: die Bewertung, eine Kategorie, ein paar kurze Auszüge ohne jeden Namen, jede Firma und jeden Link, der Code im Link und ein Einweg-Code aus Ihrer Adresse, der sich nicht zurückrechnen lässt. Nicht der Text. Die <a href="../privacy/">Datenschutzerklärung</a> (auf Englisch) enthält den Rest, in einem Abschnitt für Absender.</p>
+    <h2>Was von Ihrer E-Mail gespeichert wird</h2>
+    <p>Die Nachricht enthält keine Bilder und keine Tracking-Pixel. Ein KI-Modell bewertet, wie relevant Ihre E-Mail ist. Gespeichert werden: die Bewertung, eine Kategorie, ein paar kurze Auszüge, aus denen alle Namen, Firmen und Links entfernt sind, der Code aus dem Link und ein Einweg-Code, der aus Ihrer Adresse berechnet wird und sich nicht in sie zurückrechnen lässt. Der Text selbst nicht. Alles Weitere steht in der <a href="../privacy/">Datenschutzerklärung</a> (auf Englisch), in einem Abschnitt, der sich an Absender richtet.</p>
   </div>
 
   <div class="card faq">
     <h2>Fragen</h2>
     <dl>
-      <dt>Ist das echt?</dt>
-      <dd>Ja. Eine einzige Antwort, in Ihrem eigenen Thread, auf eine E-Mail, die Sie mir geschickt haben. Der Link öffnet die Seite von GiveDirectly auf Every.org, keine Seite von mir. Wenn Sie den Link lieber nicht nutzen möchten, spenden Sie selbst auf every.org und antworten Sie auf die Nachricht mit dem Datum. Das Werkzeug schreibt nur Menschen, die mir zuerst geschrieben haben, und nie zweimal an dieselbe Adresse.</dd>
+      <dt>Ist das seriös?</dt>
+      <dd>Ja. Eine einzige Antwort, in Ihrem eigenen Thread, auf eine E-Mail, die Sie mir geschickt haben. Der Link öffnet die Seite von GiveDirectly auf Every.org, keine Seite von mir. Wenn Sie den Link lieber nicht nutzen möchten, spenden Sie selbst auf every.org und antworten Sie auf die Nachricht mit dem Datum. Das Tool schreibt nur an Menschen, die mir zuerst geschrieben haben, und nie zweimal an dieselbe Adresse.</dd>
       <dt>Antworten Sie wirklich?</dt>
-      <dd>Ja. Das Werkzeug hält mich daran: Wenn Ihre Spende ankommt, wird Ihre E-Mail in meinem Postfach mit einem Stern und einer Frist markiert, und ich antworte innerhalb von drei Werktagen.</dd>
-      <dt>Geht das Geld wirklich an die Organisation?</dt>
-      <dd>Ja. Every.org nimmt die Spende entgegen und schickt die Quittung. Ich sehe Ihre Karte nie und fasse das Geld nie an.</dd>
-      <dt>Ich habe gespendet und nichts gehört.</dt>
-      <dd>Antworten Sie auf die Nachricht mit dem Datum Ihrer Spende. Solche Antworten lese ich selbst.</dd>
+      <dd>Ja. Das Tool nimmt mich beim Wort: Sobald Ihre Spende eingeht, wird Ihre E-Mail in meinem Postfach mit einem Stern und einer Frist markiert, und ich antworte innerhalb von drei Werktagen.</dd>
+      <dt>Geht das Geld wirklich an den guten Zweck?</dt>
+      <dd>Ja. Every.org nimmt die Spende entgegen und verschickt die Quittung. Ich sehe Ihre Kartendaten nie, und das Geld geht nie durch meine Hände.</dd>
+      <dt>Ich habe gespendet und nichts mehr gehört.</dt>
+      <dd>Antworten Sie auf die Nachricht mit dem Datum Ihrer Spende. Solche Antworten lese ich persönlich.</dd>
+      <dt>Haben Sie etwas mit GiveDirectly oder Every.org zu tun?</dt>
+      <dd>Nein. Ich stehe mit keiner der beiden Organisationen in Verbindung und bekomme von keiner etwas. GiveDirectly habe ich gewählt, weil es Bargeld direkt auszahlt und seine Wirkung gut untersucht ist; Every.org, weil es Spenden für jede gemeinnützige Organisation in den USA annimmt und die Quittung selbst verschickt.</dd>
     </dl>
   </div>
 
   <div class="card waitlist">
     <p class="eyebrow">Für andere Postfächer</p>
-    <h2>Möchten Sie das für Ihr eigenes Postfach?</h2>
+    <h2>Möchten Sie das auch für Ihr eigenes Postfach?</h2>
     <p>Derselbe Filter und dieselbe Seite, mit Ihren eigenen Zahlen. Eine kleine Gruppe macht den Anfang.</p>
-    <p><a class="button" href="mailto:sergigon@gmail.com?subject=Give%20to%20Reach%20Warteliste&amp;body=Ungef%C3%A4hr%20wie%20viele%20unaufgeforderte%20B2B-E-Mails%20bekommen%20Sie%20pro%20Woche%3F%0A%0AWarum%20m%C3%B6chten%20Sie%20das%3F%0A">Auf die Warteliste</a></p>
-    <p class="small">Zwei Fragen, eine Minute: ungefähr wie viele unaufgeforderte B2B-E-Mails Sie pro Woche bekommen, und warum Sie das möchten. Ihre Antworten und Ihre Adresse lese nur ich, sie dienen nur der Einladung und werden auf Wunsch gelöscht.</p>
+    <form class="wl" method="post" action="https://give-to-reach-relay.REPLACE-AFTER-DEPLOY.workers.dev/waitlist">
+      <input type="hidden" name="lang" value="de">
+      <input type="hidden" name="t" value="">
+      <p class="hp" aria-hidden="true"><label>Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label></p>
+      <label for="wl-name">Name</label>
+      <input id="wl-name" type="text" name="name" maxlength="120" autocomplete="name">
+      <label for="wl-email">E-Mail</label>
+      <input id="wl-email" type="email" name="email" maxlength="200" required autocomplete="email">
+      <label for="wl-volume">Wie viele unaufgeforderte B2B-E-Mails bekommen Sie ungefähr pro Woche?</label>
+      <select id="wl-volume" name="volume" required>
+        <option value="" selected disabled>Bitte auswählen</option>
+        <option value="lt5">weniger als 5</option>
+        <option value="5to20">5 bis 20</option>
+        <option value="20to50">20 bis 50</option>
+        <option value="gt50">mehr als 50</option>
+      </select>
+      <label for="wl-why">Warum möchten Sie das?</label>
+      <textarea id="wl-why" name="why" maxlength="1000" rows="3" required></textarea>
+      <button class="button" type="submit">Auf die Warteliste</button>
+    </form>
+    <script>document.querySelector('form.wl input[name="t"]').value = Date.now();</script>
+    <p class="small">Ihre Antworten und Ihre Adresse liest niemand außer mir; sie werden nur genutzt, um Sie einzuladen, und auf Wunsch gelöscht.</p>
   </div>
 
   <footer>
     <p><a href="../privacy/">Datenschutzerklärung</a> &middot; <a href="../terms/">Nutzungsbedingungen</a></p>
-    <p>Give to Reach ist ein Gmail-Add-on, das ich gebaut habe und in meinem eigenen Postfach nutze. Ein privates Projekt, ohne Verbindung zu Talka. Betrieben von Sergio González, Portugal. Kontakt: <a href="mailto:sergigon@gmail.com">sergigon@gmail.com</a>. Zuletzt aktualisiert: 14. September 2026.</p>
+    <p>Give to Reach ist ein Gmail-Add-on, das ich selbst gebaut habe und in meinem eigenen Postfach einsetze. Ein privates Projekt, unabhängig von Talka. Betrieben von Sergio González, Portugal. Kontakt: <a href="mailto:sergigon@gmail.com">sergigon@gmail.com</a>. Stand: 14. September 2026.</p>
   </footer>
 </div>
 </body>
