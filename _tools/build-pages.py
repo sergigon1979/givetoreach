@@ -20,14 +20,14 @@ VOLUMES = ['lt5', '5to20', '20to50', 'gt50']
 
 # the short labels the native blocks do not carry
 FORM = {
-    'en': dict(name='Name', email='Email', linkedin='Your LinkedIn profile', choose='Choose one', opts=['fewer than 5', '5 to 20', '20 to 50', 'more than 50']),
-    'pt': dict(name='Nome', email='E-mail', linkedin='O seu perfil no LinkedIn', choose='Escolha uma opção', opts=['menos de 5', '5 a 20', '20 a 50', 'mais de 50']),
-    'es': dict(name='Nombre', email='Correo electrónico', linkedin='Tu perfil de LinkedIn', choose='Elige una opción', opts=['menos de 5', 'de 5 a 20', 'de 20 a 50', 'más de 50']),
-    'fr': dict(name='Nom', email='E-mail', linkedin='Votre profil LinkedIn', choose='Choisissez une réponse', opts=['moins de 5', 'de 5 à 20', 'de 20 à 50', 'plus de 50']),
-    'de': dict(name='Name', email='E-Mail', linkedin='Ihr LinkedIn-Profil', choose='Bitte auswählen', opts=['weniger als 5', '5 bis 20', '20 bis 50', 'mehr als 50']),
+    'en': dict(email='Email', linkedin='Your LinkedIn profile', choose='Choose one', opts=['fewer than 5', '5 to 20', '20 to 50', 'more than 50']),
+    'pt': dict(email='E-mail', linkedin='O seu perfil no LinkedIn', choose='Escolha uma opção', opts=['menos de 5', '5 a 20', '20 a 50', 'mais de 50']),
+    'es': dict(email='Correo electrónico', linkedin='Tu perfil de LinkedIn', choose='Elige una opción', opts=['menos de 5', 'de 5 a 20', 'de 20 a 50', 'más de 50']),
+    'fr': dict(email='E-mail', linkedin='Votre profil LinkedIn', choose='Choisissez une réponse', opts=['moins de 5', 'de 5 à 20', 'de 20 à 50', 'plus de 50']),
+    'de': dict(email='E-Mail', linkedin='Ihr LinkedIn-Profil', choose='Bitte auswählen', opts=['weniger als 5', '5 bis 20', '20 bis 50', 'mehr als 50']),
 }
 EN = dict(button='Join the waitlist',
-          body='Roughly how many unsolicited B2B emails do you get a week?\n\nWhy do you want this?\n',
+          body='Roughly how many unsolicited B2B emails reach your inbox a week, not counting the spam folder?\n\nWhy do you want this?\n',
           small='Your answers, your address and your profile link are read by me alone, used only to invite you, and deleted when you ask.')
 
 FORM_CSS = '''  form.wl { margin-top: 14px; }
@@ -49,8 +49,6 @@ def form_html(code, button, body, f, indent='    '):
 {indent}  <input type="hidden" name="lang" value="{code}">
 {indent}  <input type="hidden" name="t" value="">
 {indent}  <p class="hp" aria-hidden="true"><label>Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label></p>
-{indent}  <label for="wl-name">{html.escape(f['name'])}</label>
-{indent}  <input id="wl-name" type="text" name="name" maxlength="120" autocomplete="name">
 {indent}  <label for="wl-email">{html.escape(f['email'])}</label>
 {indent}  <input id="wl-email" type="email" name="email" maxlength="200" required autocomplete="email">
 {indent}  <label for="wl-linkedin">{html.escape(f['linkedin'])}</label>
@@ -118,6 +116,7 @@ def page(code, t, css):
     <h2>{t['how']}</h2>
     <ol>
 {steps}    </ol>
+    <p class="small known">{t['known']}</p>
   </div>
   <div class="banner">{t['banner']}</div>
 
@@ -170,7 +169,7 @@ def main():
         ns = {}
         exec(open(os.path.join(ROOT, '_tools', 'lang', code + '.py'), encoding='utf-8').read(), ns)
         t = ns['T']
-        assert t['lang'] == code and len(t['qa']) == 5 and len(t['steps']) == 4 and len(t['exits']) == 3, code
+        assert t['lang'] == code and len(t['qa']) == 5 and len(t['steps']) == 4 and len(t['exits']) == 3 and t['known'].startswith('* '), code
         os.makedirs(os.path.join(ROOT, code), exist_ok=True)
         open(os.path.join(ROOT, code, 'index.html'), 'w', encoding='utf-8').write(page(code, t, css))
         print(code + '/index.html written')

@@ -37,6 +37,8 @@
   .how li { position: relative; padding-left: 42px; margin-bottom: 14px; counter-increment: step; }
   .how li::before { content: counter(step); position: absolute; left: 0; top: 0; width: 27px; height: 27px; border-radius: 50%; background: #1b5e20; color: #fff; font-size: 14px; font-weight: 700; line-height: 27px; text-align: center; }
   .banner { background: #e8f5e9; color: #1b5e20; border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 16px; font-weight: 600; line-height: 1.5; }
+  .how .known { margin-top: 14px; }
+  sup { font-size: 0.75em; line-height: 0; }
   .faq dt { font-weight: 600; margin-top: 18px; }
   .faq dt:first-of-type { margin-top: 0; }
   .faq dd { margin-top: 4px; }
@@ -89,11 +91,12 @@
   <div class="card how">
     <h2>Comment ça marche</h2>
     <ol>
-      <li>Un e-mail venant d'une adresse que ma boîte n'a jamais vue est mis de côté, non lu. Personne ne le lit.</li>
+      <li>Give to Reach met de côté tous les e-mails de personnes que je ne connais pas<sup>*</sup> : je ne les vois donc jamais.</li>
       <li>Vous recevez un seul message, dans le même fil, avec un lien propre à votre e-mail.</li>
       <li>Vous donnez 2 $ à GiveDirectly sur Every.org, une plateforme de dons américaine à but non lucratif. Every.org vous envoie le reçu.</li>
       <li>Every.org prévient Give to Reach que le don a bien été effectué. Votre e-mail revient dans ma boîte de réception, et j'y réponds moi-même sous trois jours ouvrés : une vraie réponse, oui ou non, et c'est moi qui l'écris.</li>
     </ol>
+    <p class="small known">* Les personnes que je connais : celles à qui j'ai déjà écrit, celles qui font partie d'une organisation à laquelle j'ai déjà écrit, ou celles que l'une d'elles m'a présentées.</p>
   </div>
   <div class="banner">Votre don va à GiveDirectly, via Every.org. Pas un centime ne me revient. Au moment de payer, Every.org vous propose de lui laisser un pourboire ; c'est facultatif.</div>
 
@@ -138,13 +141,11 @@
       <input type="hidden" name="lang" value="fr">
       <input type="hidden" name="t" value="">
       <p class="hp" aria-hidden="true"><label>Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label></p>
-      <label for="wl-name">Nom</label>
-      <input id="wl-name" type="text" name="name" maxlength="120" autocomplete="name">
       <label for="wl-email">E-mail</label>
       <input id="wl-email" type="email" name="email" maxlength="200" required autocomplete="email">
       <label for="wl-linkedin">Votre profil LinkedIn</label>
       <input id="wl-linkedin" type="text" name="linkedin" maxlength="200" required inputmode="url" autocomplete="off" placeholder="linkedin.com/in/..." pattern="\s*(https?://)?([a-z]{1,3}\.)?linkedin\.com/in/[^\s\/?#]+/?([?#].*)?\s*" title="linkedin.com/in/your-name">
-      <label for="wl-volume">Combien d&#x27;e-mails B2B non sollicités recevez-vous par semaine, environ ?</label>
+      <label for="wl-volume">Environ combien d&#x27;e-mails B2B non sollicités arrivent chaque semaine dans votre boîte de réception, sans compter le dossier spam ?</label>
       <select id="wl-volume" name="volume" required>
         <option value="" selected disabled>Choisissez une réponse</option>
         <option value="lt5">moins de 5</option>

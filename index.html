@@ -37,6 +37,8 @@
   .how li { position: relative; padding-left: 42px; margin-bottom: 14px; counter-increment: step; }
   .how li::before { content: counter(step); position: absolute; left: 0; top: 0; width: 27px; height: 27px; border-radius: 50%; background: #1b5e20; color: #fff; font-size: 14px; font-weight: 700; line-height: 27px; text-align: center; }
   .banner { background: #e8f5e9; color: #1b5e20; border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 16px; font-weight: 600; line-height: 1.5; }
+  .how .known { margin-top: 14px; }
+  sup { font-size: 0.75em; line-height: 0; }
   .faq dt { font-weight: 600; margin-top: 18px; }
   .faq dt:first-of-type { margin-top: 0; }
   .faq dd { margin-top: 4px; }
@@ -89,11 +91,12 @@
   <div class="card how">
     <h2>How it works</h2>
     <ol>
-      <li>An email from an address that is new to my inbox is set aside, unread. No person reads it.</li>
+      <li>Give to Reach sets aside every email from someone I do not know<sup>*</sup>, so I never see it.</li>
       <li>You get one note in the same thread, with a link made for your email.</li>
       <li>You give $2 to GiveDirectly on Every.org, a US nonprofit donation platform. Every.org sends you the receipt.</li>
       <li>Every.org tells Give to Reach the gift went through. Your email comes back to my inbox, and I answer it myself within three business days: a real answer, yes or no, from me.</li>
     </ol>
+    <p class="small known">* Someone I know: anyone I have written to, anyone at an organisation I have written to, or anyone introduced by one of them.</p>
   </div>
   <div class="banner">Your gift goes to GiveDirectly through Every.org. None of it comes to me. At checkout, Every.org offers to add a tip for itself; that is optional.</div>
 
@@ -138,13 +141,11 @@
       <input type="hidden" name="lang" value="en">
       <input type="hidden" name="t" value="">
       <p class="hp" aria-hidden="true"><label>Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label></p>
-      <label for="wl-name">Name</label>
-      <input id="wl-name" type="text" name="name" maxlength="120" autocomplete="name">
       <label for="wl-email">Email</label>
       <input id="wl-email" type="email" name="email" maxlength="200" required autocomplete="email">
       <label for="wl-linkedin">Your LinkedIn profile</label>
       <input id="wl-linkedin" type="text" name="linkedin" maxlength="200" required inputmode="url" autocomplete="off" placeholder="linkedin.com/in/..." pattern="\s*(https?://)?([a-z]{1,3}\.)?linkedin\.com/in/[^\s\/?#]+/?([?#].*)?\s*" title="linkedin.com/in/your-name">
-      <label for="wl-volume">Roughly how many unsolicited B2B emails do you get a week?</label>
+      <label for="wl-volume">Roughly how many unsolicited B2B emails reach your inbox a week, not counting the spam folder?</label>
       <select id="wl-volume" name="volume" required>
         <option value="" selected disabled>Choose one</option>
         <option value="lt5">fewer than 5</option>

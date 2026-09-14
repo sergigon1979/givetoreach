@@ -37,6 +37,8 @@
   .how li { position: relative; padding-left: 42px; margin-bottom: 14px; counter-increment: step; }
   .how li::before { content: counter(step); position: absolute; left: 0; top: 0; width: 27px; height: 27px; border-radius: 50%; background: #1b5e20; color: #fff; font-size: 14px; font-weight: 700; line-height: 27px; text-align: center; }
   .banner { background: #e8f5e9; color: #1b5e20; border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 16px; font-weight: 600; line-height: 1.5; }
+  .how .known { margin-top: 14px; }
+  sup { font-size: 0.75em; line-height: 0; }
   .faq dt { font-weight: 600; margin-top: 18px; }
   .faq dt:first-of-type { margin-top: 0; }
   .faq dd { margin-top: 4px; }
@@ -89,11 +91,12 @@
   <div class="card how">
     <h2>Cómo funciona</h2>
     <ol>
-      <li>Un correo de una dirección nueva en mi bandeja de entrada se aparta sin leer. No lo lee nadie.</li>
+      <li>Give to Reach aparta todos los correos de personas que no conozco<sup>*</sup>, y por tanto nunca llego a verlos.</li>
       <li>Te llega una única nota, en el mismo hilo, con un enlace creado para tu correo.</li>
       <li>Donas 2 $ a GiveDirectly en Every.org, una plataforma estadounidense de donaciones sin ánimo de lucro. Every.org te envía el recibo.</li>
       <li>Every.org avisa a Give to Reach de que el donativo ha llegado. Tu correo vuelve a mi bandeja y lo contesto yo mismo en un plazo de tres días laborables: una respuesta de verdad, un sí o un no, escrita por mí.</li>
     </ol>
+    <p class="small known">* Personas que conozco: cualquiera a quien haya escrito, cualquier persona de una organización a la que haya escrito, o alguien que una de ellas me haya presentado.</p>
   </div>
   <div class="banner">Tu donativo va a GiveDirectly a través de Every.org. A mí no me llega nada. Al pagar, Every.org te propone añadir una propina para la propia plataforma; es opcional.</div>
 
@@ -138,13 +141,11 @@
       <input type="hidden" name="lang" value="es">
       <input type="hidden" name="t" value="">
       <p class="hp" aria-hidden="true"><label>Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label></p>
-      <label for="wl-name">Nombre</label>
-      <input id="wl-name" type="text" name="name" maxlength="120" autocomplete="name">
       <label for="wl-email">Correo electrónico</label>
       <input id="wl-email" type="email" name="email" maxlength="200" required autocomplete="email">
       <label for="wl-linkedin">Tu perfil de LinkedIn</label>
       <input id="wl-linkedin" type="text" name="linkedin" maxlength="200" required inputmode="url" autocomplete="off" placeholder="linkedin.com/in/..." pattern="\s*(https?://)?([a-z]{1,3}\.)?linkedin\.com/in/[^\s\/?#]+/?([?#].*)?\s*" title="linkedin.com/in/your-name">
-      <label for="wl-volume">¿Cuántos correos B2B no solicitados recibes a la semana, más o menos?</label>
+      <label for="wl-volume">Más o menos, ¿cuántos correos B2B no solicitados te llegan a la bandeja de entrada a la semana, sin contar la carpeta de spam?</label>
       <select id="wl-volume" name="volume" required>
         <option value="" selected disabled>Elige una opción</option>
         <option value="lt5">menos de 5</option>
