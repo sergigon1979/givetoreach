@@ -1,48 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Nothing for you here 🤖</title>
-    <meta name="robots" content="noindex,nofollow">
-    <style>
-      body {
-        font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-        margin: 0;
-        background-color: #000;
-        color: #9effff;
-        flex-direction: column;
-      }
-      h1 {
-        font-size: 24px;
-        font-weight: 600;
-        margin: 0;
-      }
-      .emoji {
-        font-size: 64px;
-        margin-bottom: 16px;
-      }
-      footer {
-        position: fixed;
-        bottom: 16px;
-        left: 0;
-        right: 0;
-        text-align: center;
-        font-size: 13px;
-        color: #9effff;
-      }
-      footer a {
-        color: #9effff;
-        text-decoration: underline;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="emoji">🛸</div>
-    <h1>Nothing for you here, mate.</h1>
-    <footer><a href="/privacy/">Privacy policy</a> · <a href="/terms/">Terms</a></footer>
-  </body>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Give to Reach</title>
+<meta name="description" content="A $2 gift to GiveDirectly, as a sign that your email was meant for me. How Give to Reach works, and what it keeps about your email.">
+<link rel="icon" href="logo/give-to-reach-logo-32.png">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 17px; line-height: 1.6; color: #1a1a1a; background: #fff; padding: 44px 20px 56px; }
+  img { display: block; max-width: 100%; }
+  a { color: #1b5e20; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 2px; }
+  a:hover { color: #164a1a; }
+  a:focus-visible { outline: 3px solid #2e7d32; outline-offset: 3px; }
+  strong { font-weight: 600; }
+  .container { max-width: 600px; margin: 0 auto; }
+  .lang { text-align: center; font-size: 13px; color: #777; margin-bottom: 18px; }
+  .lang a { color: #777; margin: 0 4px; }
+  .brand { display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 14px; }
+  .brand img { width: 44px; height: 44px; }
+  h1 { font-size: 34px; font-weight: 700; letter-spacing: -0.6px; line-height: 1.1; }
+  .intro { font-size: 19px; line-height: 1.5; color: #3d3d3d; text-align: center; margin: 0 0 22px; }
+  .profile { display: flex; align-items: center; justify-content: center; gap: 14px; margin: 0 0 40px; }
+  .profile img { width: 52px; height: 52px; border-radius: 50%; object-fit: cover; flex: none; }
+  .profile h3 { font-size: 16px; font-weight: 600; line-height: 1.3; }
+  .profile p { font-size: 14px; line-height: 1.45; color: #5f5f5f; }
+  .card { border-top: 1px solid #e4e7e4; padding-top: 26px; margin-bottom: 34px; }
+  .card h2 { font-size: 21px; font-weight: 600; letter-spacing: -0.2px; line-height: 1.3; margin-bottom: 12px; }
+  .card p, .card li { margin-bottom: 12px; }
+  .card p:last-child, .card li:last-child { margin-bottom: 0; }
+  .card ol { padding-left: 22px; }
+  .card.how { border-top: 0; background: #f4f6f4; border-radius: 14px; padding: 24px 26px 22px; margin-bottom: 12px; }
+  .how h2 { margin-bottom: 16px; }
+  .how ol { list-style: none; padding-left: 0; counter-reset: step; }
+  .how li { position: relative; padding-left: 42px; margin-bottom: 14px; counter-increment: step; }
+  .how li::before { content: counter(step); position: absolute; left: 0; top: 0; width: 27px; height: 27px; border-radius: 50%; background: #1b5e20; color: #fff; font-size: 14px; font-weight: 700; line-height: 27px; text-align: center; }
+  .banner { background: #e8f5e9; color: #1b5e20; border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 16px; font-weight: 600; line-height: 1.5; }
+  .how .known { margin-top: 14px; }
+  sup { font-size: 0.75em; line-height: 0; }
+  .faq dt { font-weight: 600; margin-top: 18px; }
+  .faq dt:first-of-type { margin-top: 0; }
+  .faq dd { margin-top: 4px; }
+  .card.waitlist { border: 1px solid #bcd9bf; border-radius: 14px; background: #f7fbf7; padding: 26px 28px; margin-top: 52px; margin-bottom: 0; }
+  .card .eyebrow { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.6px; color: #1b5e20; margin-bottom: 8px; }
+  .button { display: inline-block; background: #1b5e20; color: #fff; text-decoration: none; font-size: 16px; font-weight: 600; line-height: 1.2; padding: 14px 24px; border-radius: 10px; margin: 6px 0 2px; }
+  .button:hover { background: #164a1a; color: #fff; }
+  .small { font-size: 14px; line-height: 1.5; color: #5f5f5f; }
+  form.wl { margin-top: 14px; }
+  form.wl label { display: block; font-size: 14px; font-weight: 600; color: #1a1a1a; margin: 12px 0 4px; }
+  form.wl input, form.wl select, form.wl textarea { width: 100%; font: inherit; font-size: 16px; color: #1a1a1a; background: #fff; border: 1px solid #bcd9bf; border-radius: 8px; padding: 10px 12px; }
+  form.wl textarea { min-height: 84px; resize: vertical; }
+  form.wl input:focus, form.wl select:focus, form.wl textarea:focus { outline: 2px solid #1b5e20; outline-offset: 1px; border-color: #1b5e20; }
+  form.wl .hp { position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden; }
+  form.wl button.button { border: 0; cursor: pointer; font-family: inherit; margin-top: 16px; }
+  form.wl + .small { margin-top: 12px; }
+  footer { margin-top: 44px; padding-top: 20px; border-top: 1px solid #e4e7e4; text-align: center; font-size: 14px; line-height: 1.5; color: #666; }
+  footer p { margin-bottom: 6px; }
+  @media (max-width: 480px) {
+    body { font-size: 16px; padding: 28px 18px 48px; }
+    h1 { font-size: 28px; }
+    .brand img { width: 38px; height: 38px; }
+    .intro { font-size: 17px; text-align: left; margin-bottom: 20px; }
+    .profile { justify-content: flex-start; margin-bottom: 32px; }
+    .card { padding-top: 22px; margin-bottom: 28px; }
+    .card h2 { font-size: 19px; }
+    .card.how { padding: 20px 18px 18px; border-radius: 12px; }
+    .how li { padding-left: 38px; }
+    .how li::before { width: 26px; height: 26px; line-height: 26px; font-size: 13px; }
+    .banner { padding: 12px 16px; font-size: 15px; margin-bottom: 30px; }
+    .card.waitlist { padding: 22px 18px; margin-top: 40px; }
+    .button { display: block; text-align: center; }
+    form.wl button.button { width: 100%; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <p class="lang"><span>English</span> · <a href="pt/">Português</a> · <a href="es/">Español</a> · <a href="fr/">Français</a> · <a href="de/">Deutsch</a></p>
+  <div class="brand"><img src="logo/give-to-reach-logo-128.png" alt=""><h1>Give to Reach</h1></div>
+  <p class="intro">I get more first-time email than I can read. A small tool I built sets it aside and replies for me with one request: a $2 gift to GiveDirectly, as a sign that your email was meant for me.</p>
+  <div class="profile">
+    <img src="sergio-320.jpg" alt="Sergio González">
+    <div>
+      <h3>Sergio González</h3>
+      <p>CRO at Talka. Before that, Stripe, Twitter and Google. <a href="https://www.linkedin.com/in/sgonzalezalonso/" target="_blank" rel="noopener">LinkedIn</a></p>
+    </div>
+  </div>
+
+  <div class="card how">
+    <h2>How it works</h2>
+    <ol>
+      <li>Give to Reach sets aside every email from someone I do not know<sup>*</sup>, so I never see it.</li>
+      <li>You get one note in the same thread, with a link made for your email.</li>
+      <li>You give $2 to GiveDirectly on Every.org, a US nonprofit donation platform. Every.org sends you the receipt.</li>
+      <li>Every.org tells Give to Reach the gift went through. Your email comes back to my inbox, and I answer it myself within three business days: a real answer, yes or no, from me.</li>
+    </ol>
+    <p class="small known">* Someone I know: anyone I have written to, anyone at an organisation I have written to, or anyone introduced by one of them.</p>
+  </div>
+  <div class="banner">Your gift goes to GiveDirectly through Every.org. None of it comes to me. At checkout, Every.org offers to add a tip for itself; that is optional.</div>
+
+  <div class="card">
+    <h2>If this note is not for you</h2>
+    <p><strong>A client, or someone I know?</strong> The note reached you by mistake, and I am sorry. Reply to it with one line and I will read it myself. A pitch in that reply gets the same answer: the link.</p>
+    <p><strong>Would rather not?</strong> No hard feelings. Your email stays set aside, unread, so my silence is not an answer.</p>
+    <p><strong>Writing again?</strong> A second email from the same address gets no second note; it is set aside too. One gift covers you: after it, your later emails come straight to my inbox.</p>
+  </div>
+
+  <div class="card">
+    <h2>Why $2, and why GiveDirectly</h2>
+    <p>The amount is small on purpose. It is not a fee; it is a sign that you meant to write to me and not to a list. <a href="https://www.givedirectly.org/" target="_blank" rel="noopener">GiveDirectly</a> gives cash to families in extreme poverty, and its results have been tested in <a href="https://www.givedirectly.org/research-at-give-directly/" target="_blank" rel="noopener">independent trials</a>.</p>
+  </div>
+
+  <div class="card">
+    <h2>What it keeps about your email</h2>
+    <p>The note has no images and no tracking pixels. An AI model scores your email for relevance. What is kept: the score, a category, a few short excerpts with every name, company and link removed, the code in the link, and a one-way code made from your address that cannot be turned back into it. Not the text. The <a href="privacy/">privacy policy</a> has the rest, in a section written for senders.</p>
+  </div>
+
+  <div class="card faq">
+    <h2>Questions</h2>
+    <dl>
+      <dt>Is this real?</dt>
+      <dd>Yes. One reply, in your own thread, to an email you sent me. The link opens GiveDirectly's page on Every.org, not a page of mine. If you would rather not use the link, give on every.org yourself and reply to the note with the date. The tool writes only to people who wrote to me first, and never twice to the same address.</dd>
+      <dt>Will you actually reply?</dt>
+      <dd>Yes. The tool holds me to it: when your gift lands, your email is starred in my inbox with a deadline, and I answer within three business days.</dd>
+      <dt>Is the money really going to charity?</dt>
+      <dd>Yes. Every.org takes the gift and sends the receipt. I never see your card and never touch the money.</dd>
+      <dt>I gave and heard nothing.</dt>
+      <dd>Reply to the note with the date of your gift. I read those myself.</dd>
+      <dt>Are you connected to GiveDirectly or Every.org?</dt>
+      <dd>No. I have no relationship with either, and I get nothing from either. I chose GiveDirectly because it gives cash directly and its results are well studied, and Every.org because it takes gifts for any US nonprofit and sends the receipt itself.</dd>
+    </dl>
+  </div>
+
+  <div class="card waitlist">
+    <p class="eyebrow">For other inboxes</p>
+    <h2>Want this on your own inbox?</h2>
+    <p>The same filter and the same page, with your own numbers. A small group is going first.</p>
+    <form class="wl" method="post" action="https://give-to-reach-relay.sergigon.workers.dev/waitlist">
+      <input type="hidden" name="lang" value="en">
+      <input type="hidden" name="t" value="">
+      <p class="hp" aria-hidden="true"><label>Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label></p>
+      <label for="wl-email">Email</label>
+      <input id="wl-email" type="email" name="email" maxlength="200" required autocomplete="email">
+      <label for="wl-linkedin">Your LinkedIn profile</label>
+      <input id="wl-linkedin" type="text" name="linkedin" maxlength="200" required inputmode="url" autocomplete="off" placeholder="linkedin.com/in/..." pattern="\s*(https?://)?([a-z]{1,3}\.)?linkedin\.com/in/[^\s\/?#]+/?([?#].*)?\s*" title="linkedin.com/in/your-name">
+      <label for="wl-volume">Roughly how many unsolicited B2B emails reach your inbox a week, not counting the spam folder?</label>
+      <select id="wl-volume" name="volume" required>
+        <option value="" selected disabled>Choose one</option>
+        <option value="lt5">fewer than 5</option>
+        <option value="5to20">5 to 20</option>
+        <option value="20to50">20 to 50</option>
+        <option value="gt50">more than 50</option>
+      </select>
+      <label for="wl-why">Why do you want this?</label>
+      <textarea id="wl-why" name="why" maxlength="1000" rows="3" required></textarea>
+      <button class="button" type="submit">Join the waitlist</button>
+    </form>
+    <script>document.querySelector('form.wl input[name="t"]').value = Date.now();</script>
+    <p class="small">Your answers, your address and your profile link are read by me alone, used only to invite you, and deleted when you ask.</p>
+  </div>
+
+  <footer>
+    <p><a href="privacy/">Privacy policy</a> &middot; <a href="terms/">Terms</a></p>
+    <p>Give to Reach is a Gmail add-on I built and run on my own inbox. A personal project, not connected to Talka. Run by Sergio González, Portugal. Contact: <a href="mailto:sergio@givetoreach.com">sergio@givetoreach.com</a>. Last updated 14 September 2026.</p>
+  </footer>
+</div>
+</body>
 </html>
