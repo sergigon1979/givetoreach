@@ -30,4 +30,4 @@ T = dict(lang='de', title='Give to Reach', desc='Eine Spende von 2 $ an GiveDire
   button='Auf die Warteliste', subject='Warteliste für Give to Reach', body='Wie viele unaufgeforderte B2B-E-Mails landen ungefähr pro Woche in Ihrem Posteingang, den Spam-Ordner nicht mitgezählt?\n\nWarum möchten Sie das?\n',
   small='Ihre Antworten, Ihre Adresse und den Link zu Ihrem Profil liest niemand außer mir; sie werden nur genutzt, um Sie einzuladen, und auf Wunsch gelöscht.',
   privacy='Datenschutzerklärung', terms='Nutzungsbedingungen',
-  foot='Give to Reach ist ein Gmail-Add-on, das ich selbst gebaut habe und in meinem eigenen Postfach einsetze. Ein privates Projekt, unabhängig von Talka. Betrieben von Sergio González, Portugal. Kontakt: <a href="mailto:sergigon@gmail.com">sergigon@gmail.com</a>. Stand: 14. September 2026.')
+  foot='Give to Reach ist ein Gmail-Add-on, das ich selbst gebaut habe und in meinem eigenen Postfach einsetze. Ein privates Projekt, unabhängig von Talka. Betrieben von Sergio González, Portugal. Kontakt: <a href="mailto:sergio@givetoreach.com">sergio@givetoreach.com</a>. Stand: 14. September 2026.')
