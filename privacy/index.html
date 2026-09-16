@@ -152,9 +152,9 @@ main .toc a{margin-right:12px;white-space:nowrap}
 main .contents ol{margin-left:22px}
 </style></head><body><main>
 <h1>Privacy policy</h1>
-<p class="meta"><em>Last updated: 14 September 2026. Operator and contact: Sergio González, <a href="mailto:sergigon@gmail.com">sergigon@gmail.com</a>.</em></p>
+<p class="meta"><em>Last updated: 16 September 2026. Operator and contact: Sergio González, <a href="mailto:sergigon@gmail.com">sergigon@gmail.com</a>.</em></p>
 
-<p>Give to Reach is a personal, non-commercial Gmail add-on made and run by Sergio González. Once an hour it looks at new mail in your inbox, sets aside mail from people you have never dealt with who are pitching you, replies once in that thread with a link to give $3 to GiveDirectly, puts the email back in your inbox when the gift lands, and keeps a log of what happened. This page says exactly what it reads, what leaves your Google account and where it goes, what is kept for how long, and what it never does. It is written for two audiences: people who install the add-on ("you"), and people who write to them and receive the automated reply ("senders", see <a href="#senders">For senders</a>).</p>
+<p>Give to Reach is a personal, non-commercial Gmail add-on made and run by Sergio González. Once an hour it looks at new mail in your inbox, sets aside mail from people you have never dealt with who are pitching you, replies once in that thread with a link to give $2 to GiveDirectly, puts the email back in your inbox when the gift lands, and keeps a log of what happened. This page says exactly what it reads, what leaves your Google account and where it goes, what is kept for how long, and what it never does. It is written for two audiences: people who install the add-on ("you"), and people who write to them and receive the automated reply ("senders", see <a href="#senders">For senders</a>).</p>
 
 <div class="contents box"><strong>Contents</strong>
 <ol>
@@ -168,6 +168,7 @@ main .contents ol{margin-left:22px}
 <li><a href="#published">Published results</a></li>
 <li><a href="#google">Google API Services User Data Policy and Limited Use</a></li>
 <li><a href="#senders">For senders</a></li>
+<li><a href="#waitlist">The waitlist</a></li>
 <li><a href="#changes">Changes to this policy</a></li>
 <li><a href="#contact">Contact</a></li>
 </ol></div>
@@ -218,7 +219,8 @@ main .contents ol{margin-left:22px}
 <li>What comes back: Every.org sends the add-on a notification that a gift with that token was completed, with the amount and the charity. Every.org, a registered US 501(c)(3) public charity, is the legal recipient of the gift and issues the donor's receipt; its handling of the donor's own details is governed by <a href="https://www.every.org/privacy">Every.org's privacy policy</a>.</li>
 </ul>
 
-<h3>The Give to Reach relay at go.givetoreach.com, operated by Sergio González</h3>
+<h3>The Give to Reach relay, operated by Sergio González</h3>
+<p>The relay runs at <code>give-to-reach-relay.sergigon.workers.dev</code> on Cloudflare, in Western Europe. It will move to <code>go.givetoreach.com</code> later; this page will say so when it does.</p>
 <ul>
 <li>What is sent, per gated email: the rubric scores, the category, what they sell in one line, the sender's role and company size, the opening style, the placeholdered excerpts, which price and wording variant was shown, a salted one-way hash of the sender's address, and events with timestamps (reply sent, payment page fetched, link clicked, gift made, thread restored, you replied, sender asked to stop, sender said they know you).</li>
 <li>What is never sent: the message, its subject, the sender's name or address in clear, your own address, your contacts, or anything at all about mail the add-on did not gate.</li>
@@ -276,14 +278,19 @@ main .contents ol{margin-left:22px}
 <li><strong>Who.</strong> The person you wrote to runs the add-on inside their own mailbox and is responsible for what happens to your email there. Sergio González (<a href="mailto:sergigon@gmail.com">sergigon@gmail.com</a>) operates the add-on and the relay and is responsible for the relay's ledger and the published results.</li>
 <li><strong>What is used, and why.</strong> Your email address: to reply to you in your own thread, to pre-fill the donation form so Every.org can send you a receipt, and, as a salted one-way hash that cannot be turned back into your address, to make sure the same person always sees the same offer and to count repeat senders. Your message: read by the add-on to decide that it was an unsolicited pitch, and, if the recipient has switched scoring on, sent from their account to Anthropic to be scored against a rubric and then discarded; the recipient keeps the scores and short placeholdered excerpts in their own log (and, once the relay described in section 4 is running, the relay keeps them with your address hashed). Your message itself is not kept by the add-on, the relay or Sergio, and no human other than the person you wrote to reads it.</li>
 <li><strong>The link.</strong> The reply carries one link, unique to your one email, to Every.org. Opening it is not recorded by the add-on; giving records that a gift with that token was completed. The gift goes to GiveDirectly through Every.org, a US 501(c)(3) public charity, which sends you the receipt; neither the recipient nor Sergio receives any money.</li>
-<li><strong>Stopping.</strong> The reply tells you to reply STOP; doing so means that mailbox will never send you an automated reply again. A stop link, an "I know you" link and the recording of link opens exist only when the payment page on go.givetoreach.com is in use, which is not the case in the current version; this section will say so when that changes.</li>
+<li><strong>Stopping.</strong> Each mailbox sends you this note at most once, ever, whether or not you give, so there is nothing to unsubscribe from. If you reply STOP it is honoured all the same. A stop link, an "I know you" link and the recording of link opens exist only when the payment page on the relay is in use, which is not the case in the current version; this section will say so when that changes.</li>
 <li><strong>Your rights.</strong> Write to the contact address with the token from your link, or with your email address, to ask what is held about that email outside the recipient's own mailbox, to have it deleted, or to object to its use. Where European data protection law applies, the basis for this handling is the recipient's legitimate interest in managing unsolicited mail and Sergio's in running and publishing the experiment, and you have the rights of access, erasure and objection described above.</li>
 </ul>
 
-<h2 id="changes">11. Changes to this policy</h2>
+<h2 id="waitlist">11. The waitlist</h2>
+<p>The form on the home page collects your email address, your LinkedIn profile, how much unsolicited email you get, why you want this, and the language of the page you used. No name, no account, no payment details, no cookies, no analytics.</p>
+<p>Sergio González uses it to decide who gets a place and to tell you when one is ready, and for nothing else. It is stored on Cloudflare in Western Europe, is never sold or shared, and a salted one-way hash of your IP address is kept for one day to stop repeat submissions; it is not kept on your entry.</p>
+<p>Your entry is deleted when you take a place, when you ask, or when the waitlist closes. Write to the contact address to see it, correct it or remove it; removal is immediate and needs no reason. The basis is your consent, given by submitting the form, and you can withdraw it at any time.</p>
+
+<h2 id="changes">12. Changes to this policy</h2>
 <p>If the way the add-on uses Google user data changes, this page will be updated first and you will be asked to consent to the change inside the add-on before any data is used in the new way. The date at the top is the date of the current version.</p>
 
-<h2 id="contact">12. Contact</h2>
+<h2 id="contact">13. Contact</h2>
 <p>Sergio González, <a href="mailto:sergigon@gmail.com">sergigon@gmail.com</a>. This is a personal project, not a company.</p>
 
 <p><a href="/">Back to Give to Reach</a> · <a href="/terms/">Terms</a></p></main></body></html>
