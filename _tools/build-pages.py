@@ -13,7 +13,7 @@ The underscore keeps this directory out of the published site (GitHub Pages runs
 import html, os, re, sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-RELAY = 'https://give-to-reach-relay.REPLACE-AFTER-DEPLOY.workers.dev'
+RELAY = 'https://give-to-reach-relay.sergigon.workers.dev'
 ACTION = RELAY + '/waitlist'
 CODES = ['pt', 'es', 'fr', 'de']
 VOLUMES = ['lt5', '5to20', '20to50', 'gt50']
