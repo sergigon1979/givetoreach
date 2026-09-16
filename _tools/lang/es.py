@@ -1,7 +1,7 @@
 # es: the native reader's block of 2026-09-14; edit here, then run _tools/build-pages.py
 T = dict(lang='es', title='Give to Reach', desc='Un donativo de 2 $ a GiveDirectly, como señal de que tu correo era para mí. Cómo funciona Give to Reach y qué guarda de tu correo.',
   switch='<a href="../">English</a> · <a href="../pt/">Português</a> · <span>Español</span> · <a href="../fr/">Français</a> · <a href="../de/">Deutsch</a>',
-  intro='Recibo más correos de gente que no conozco de los que puedo leer. Una pequeña herramienta que he creado los aparta y responde por mí con una sola petición: un donativo de 2 $ a GiveDirectly, como señal de que tu correo era para mí.',
+  intro='Recibo más correos de gente que no conozco de los que puedo leer. Give to Reach los aparta y responde por mí con una sola petición: un donativo de 2 $ a GiveDirectly, como señal de que tu correo era para mí.',
   byline='CRO en Talka. Antes, en Stripe, Twitter y Google.', linkedin='LinkedIn',
   known='* Personas que conozco: cualquiera a quien haya escrito, cualquier persona de una organización a la que haya escrito, o alguien que una de ellas me haya presentado.',
   how='Cómo funciona',
@@ -30,4 +30,4 @@ T = dict(lang='es', title='Give to Reach', desc='Un donativo de 2 $ a GiveDirect
   button='Apúntate a la lista de espera', subject='Lista de espera de Give to Reach', body='Más o menos, ¿cuántos correos B2B no solicitados te llegan a la bandeja de entrada a la semana, sin contar la carpeta de spam?\n\n¿Por qué te interesa?\n',
   small='Tus respuestas, tu dirección y el enlace a tu perfil los leo yo y nadie más, solo sirven para invitarte y se borran cuando lo pidas.',
   privacy='Política de privacidad', terms='Términos',
-  foot='Give to Reach es un complemento de Gmail que he creado y uso en mi propia bandeja. Es un proyecto personal, sin relación con Talka. Lo lleva Sergio González, desde Portugal. Contacto: <a href="mailto:sergio@givetoreach.com">sergio@givetoreach.com</a>. Última actualización: 14 de septiembre de 2026.')
+  foot='Give to Reach es un complemento de Gmail creado y gestionado por Sergio González, desde Portugal. Contacto: <a href="mailto:sergio@givetoreach.com">sergio@givetoreach.com</a>. Última actualización: 14 de septiembre de 2026.')
