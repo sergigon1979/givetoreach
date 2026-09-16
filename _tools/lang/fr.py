@@ -1,7 +1,7 @@
 # fr: the native reader's block of 2026-09-14; edit here, then run _tools/build-pages.py
 T = dict(lang='fr', title='Give to Reach', desc="Un don de 2 $ à GiveDirectly, pour montrer que votre e-mail m'était bien destiné. Comment fonctionne Give to Reach, et ce que l'outil conserve de votre e-mail.",
   switch='<a href="../">English</a> · <a href="../pt/">Português</a> · <a href="../es/">Español</a> · <span>Français</span> · <a href="../de/">Deutsch</a>',
-  intro="Je reçois plus d'e-mails d'inconnus que je ne peux en lire. Un petit outil que j'ai créé les met de côté et répond à ma place, avec une seule demande : un don de 2 $ à GiveDirectly, pour montrer que votre e-mail m'était bien destiné.",
+  intro="Je reçois plus d'e-mails d'inconnus que je ne peux en lire. Give to Reach les met de côté et répond à ma place, avec une seule demande : un don de 2 $ à GiveDirectly, pour montrer que votre e-mail m'était bien destiné.",
   byline='CRO chez Talka. Auparavant chez Stripe, Twitter et Google.', linkedin='LinkedIn',
   known="* Les personnes que je connais : celles à qui j'ai déjà écrit, celles qui font partie d'une organisation à laquelle j'ai déjà écrit, ou celles que l'une d'elles m'a présentées.",
   how='Comment ça marche',
@@ -30,4 +30,4 @@ T = dict(lang='fr', title='Give to Reach', desc="Un don de 2 $ à GiveDirectly, 
   button="Rejoindre la liste d'attente", subject="Liste d'attente Give to Reach", body="Environ combien d'e-mails B2B non sollicités arrivent chaque semaine dans votre boîte de réception, sans compter le dossier spam ?\n\nPourquoi cela vous intéresse-t-il ?\n",
   small="Vos réponses, votre adresse et le lien vers votre profil ne sont lus que par moi, ne servent qu'à vous inviter et sont supprimés dès que vous le demandez.",
   privacy='Politique de confidentialité', terms="Conditions d'utilisation",
-  foot="Give to Reach est un module complémentaire Gmail que j'ai créé et que je fais tourner sur ma propre boîte de réception. Un projet personnel, sans lien avec Talka. Exploité par Sergio González, Portugal. Contact : <a href=\"mailto:sergio@givetoreach.com\">sergio@givetoreach.com</a>. Dernière mise à jour : 14 septembre 2026.")
+  foot="Give to Reach est un module complémentaire Gmail que j'ai créé et que je fais tourner sur ma propre boîte de réception. Exploité par Sergio González, Portugal. Contact : <a href=\"mailto:sergio@givetoreach.com\">sergio@givetoreach.com</a>. Dernière mise à jour : 14 septembre 2026.")

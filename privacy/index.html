@@ -152,9 +152,9 @@ main .toc a{margin-right:12px;white-space:nowrap}
 main .contents ol{margin-left:22px}
 </style></head><body><main>
 <h1>Privacy policy</h1>
-<p class="meta"><em>Last updated: 16 September 2026. Operator and contact: Sergio González, <a href="mailto:sergio@givetoreach.com">sergio@givetoreach.com</a>.</em></p>
+<p class="meta"><em>Last updated: 17 September 2026. Operator and contact: Sergio González, <a href="mailto:sergio@givetoreach.com">sergio@givetoreach.com</a>.</em></p>
 
-<p>Give to Reach is a personal, non-commercial Gmail add-on made and run by Sergio González. Once an hour it looks at new mail in your inbox, sets aside mail from people you have never dealt with who are pitching you, replies once in that thread with a link to give $2 to GiveDirectly, puts the email back in your inbox when the gift lands, and keeps a log of what happened. This page says exactly what it reads, what leaves your Google account and where it goes, what is kept for how long, and what it never does. It is written for two audiences: people who install the add-on ("you"), and people who write to them and receive the automated reply ("senders", see <a href="#senders">For senders</a>).</p>
+<p>Give to Reach is a Gmail add-on built and run by Sergio González. It is free, and nobody is paid for any part of it. Once an hour it looks at new mail in your inbox, sets aside mail from people you have never dealt with who are pitching you, replies once in that thread with a link to give $2 to GiveDirectly, puts the email back in your inbox when the gift lands, and keeps a log of what happened. This page says exactly what it reads, what leaves your Google account and where it goes, what is kept for how long, and what it never does. It is written for two audiences: people who install the add-on ("you"), and people who write to them and receive the automated reply ("senders", see <a href="#senders">For senders</a>).</p>
 
 <div class="contents box"><strong>Contents</strong>
 <ol>
@@ -224,7 +224,7 @@ main .contents ol{margin-left:22px}
 <ul>
 <li>What is sent, per gated email: the rubric scores, the category, what they sell in one line, the sender's role and company size, the opening style, the placeholdered excerpts, which price and wording variant was shown, a salted one-way hash of the sender's address, and events with timestamps (reply sent, payment page fetched, link clicked, gift made, thread restored, you replied, sender asked to stop, sender said they know you).</li>
 <li>What is never sent: the message, its subject, the sender's name or address in clear, your own address, your contacts, or anything at all about mail the add-on did not gate.</li>
-<li>What the relay knows about you: an anonymous participant id it assigns when the add-on first enrols, the settings that shape the experiment (which variants you are in), a daily heartbeat so a silent install is noticed, and the profile you type yourself on the relay's onboarding page (your name, role, company, its stage and industry, and a few public facts about you a sender could cite), which the add-on fetches back into your account so the scorer can judge fit. The profile is yours: edit it on the same page, or ask for it to be deleted. It holds no Google permission and cannot reach your mailbox.</li>
+<li>What the relay knows about you: an anonymous participant id it assigns when the add-on first enrols, the settings that shape which variants you are in, a daily heartbeat so a silent install is noticed, and the profile you type yourself on the relay's onboarding page (your name, role, company, its stage and industry, and a few public facts about you a sender could cite), which the add-on fetches back into your account so the scorer can judge fit. The profile is yours: edit it on the same page, or ask for it to be deleted. It holds no Google permission and cannot reach your mailbox.</li>
 <li>The relay also serves the payment page a sender lands on before Every.org, and records that page fetch with the visitor's browser type, the seconds since the reply was sent, and a hashed IP address, so that clicks by link-scanning security software can be told apart from a person.</li>
 <li>Until the relay is running, none of this leaves your account: the link in the reply goes straight to Every.org and the add-on keeps its counts in its own storage inside your account.</li>
 </ul>
@@ -255,7 +255,7 @@ main .contents ol{margin-left:22px}
 <li><strong>In your Google account:</strong> the labels on held and restored threads, and the add-on's own bookkeeping (your settings, your profile, which messages it has already looked at, which senders it has replied to, as one-way hashes), held in Google's storage for the add-on inside your account and never on a server. No spreadsheet, no file. Uninstalling revokes access to all of it.</li>
 <li><strong>At Anthropic:</strong> the pitch text, for at most the retention period in Anthropic's policy quoted in section 4 (30 days for API traffic, with the stated exceptions). The add-on keeps no copy.</li>
 <li><strong>At Every.org:</strong> whatever a donation normally creates there, under Every.org's own policy.</li>
-<li><strong>At the relay:</strong> scores, categories, excerpts, variant and hashed sender identifiers are kept, because they are the data the experiment and the public results are built from; your profile is kept for as long as you take part and deleted when you ask. Hashed IP addresses from payment-page fetches are purged after 30 days. Sender addresses exist there only as a salted one-way hash. Message bodies are never stored there at all.</li>
+<li><strong>At the relay:</strong> scores, categories, excerpts, variant and hashed sender identifiers are kept, because they are the data the published results are built from; your profile is kept for as long as you take part and deleted when you ask. Hashed IP addresses from payment-page fetches are purged after 30 days. Sender addresses exist there only as a salted one-way hash. Message bodies are never stored there at all.</li>
 </ul>
 
 <h2 id="published">8. Published results</h2>
@@ -263,10 +263,10 @@ main .contents ol{margin-left:22px}
 <ul>
 <li>Pooled aggregates only: counts, rates and distributions across all participants, never a line per participant unless that participant has agreed to an anonymous line of their own.</li>
 <li>No slice with fewer than about ten emails behind it; until a slice has enough, the page says "too early" instead of showing a number.</li>
-<li>Per-variant breakdowns (which price or wording did better) only after that experiment has closed.</li>
+<li>Per-variant breakdowns (which price or wording did better) only after that test has closed.</li>
 <li>Excerpts only as a few hand-picked examples, genericized further by hand, never as a feed, and never tied to a date, a participant or a sender.</li>
 </ul>
-<p>Nothing is sold, licensed or shared with anyone for any other purpose. Participants agree to this pooled publication when they install; the anonymous per-participant line is a separate, optional consent.</p>
+<p>Your personal data is never sold, licensed or shared with anyone. The pooled figures described above identify nobody, and may be published, presented or licensed as a body of research. Participants agree to this pooled publication when they install; the anonymous per-participant line is a separate, optional consent.</p>
 
 <h2 id="google">9. Google API Services User Data Policy and Limited Use</h2>
 <div class="disclosure">Give to Reach's use of information received from Google APIs will adhere to <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</div>
@@ -279,7 +279,7 @@ main .contents ol{margin-left:22px}
 <li><strong>What is used, and why.</strong> Your email address: to reply to you in your own thread, to pre-fill the donation form so Every.org can send you a receipt, and, as a salted one-way hash that cannot be turned back into your address, to make sure the same person always sees the same offer and to count repeat senders. Your message: read by the add-on to decide that it was an unsolicited pitch, and, if the recipient has switched scoring on, sent from their account to Anthropic to be scored against a rubric and then discarded; the recipient keeps the scores and short placeholdered excerpts in their own log (and, once the relay described in section 4 is running, the relay keeps them with your address hashed). Your message itself is not kept by the add-on, the relay or Sergio, and no human other than the person you wrote to reads it.</li>
 <li><strong>The link.</strong> The reply carries one link, unique to your one email, to Every.org. Opening it is not recorded by the add-on; giving records that a gift with that token was completed. The gift goes to GiveDirectly through Every.org, a US 501(c)(3) public charity, which sends you the receipt; neither the recipient nor Sergio receives any money.</li>
 <li><strong>Stopping.</strong> Each mailbox sends you this note at most once, ever, whether or not you give, so there is nothing to unsubscribe from. If you reply STOP it is honoured all the same. A stop link, an "I know you" link and the recording of link opens exist only when the payment page on the relay is in use, which is not the case in the current version; this section will say so when that changes.</li>
-<li><strong>Your rights.</strong> Write to the contact address with the token from your link, or with your email address, to ask what is held about that email outside the recipient's own mailbox, to have it deleted, or to object to its use. Where European data protection law applies, the basis for this handling is the recipient's legitimate interest in managing unsolicited mail and Sergio's in running and publishing the experiment, and you have the rights of access, erasure and objection described above.</li>
+<li><strong>Your rights.</strong> Write to the contact address with the token from your link, or with your email address, to ask what is held about that email outside the recipient's own mailbox, to have it deleted, or to object to its use. Where European data protection law applies, the basis for this handling is the recipient's legitimate interest in managing unsolicited mail and Sergio's in running the service and publishing its results, and you have the rights of access, erasure and objection described above.</li>
 </ul>
 
 <h2 id="waitlist">11. The waitlist</h2>
@@ -291,6 +291,6 @@ main .contents ol{margin-left:22px}
 <p>If the way the add-on uses Google user data changes, this page will be updated first and you will be asked to consent to the change inside the add-on before any data is used in the new way. The date at the top is the date of the current version.</p>
 
 <h2 id="contact">13. Contact</h2>
-<p>Sergio González, <a href="mailto:sergio@givetoreach.com">sergio@givetoreach.com</a>. This is a personal project, not a company.</p>
+<p>Sergio González, <a href="mailto:sergio@givetoreach.com">sergio@givetoreach.com</a>.</p>
 
 <p><a href="/">Back to Give to Reach</a> · <a href="/terms/">Terms</a></p></main></body></html>

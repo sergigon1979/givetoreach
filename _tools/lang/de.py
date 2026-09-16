@@ -1,7 +1,7 @@
 # de: the native reader's block of 2026-09-14; edit here, then run _tools/build-pages.py
 T = dict(lang='de', title='Give to Reach', desc='Eine Spende von 2 $ an GiveDirectly als Zeichen, dass Ihre E-Mail wirklich für mich bestimmt war. Wie Give to Reach funktioniert und was von Ihrer E-Mail gespeichert wird.',
   switch='<a href="../">English</a> · <a href="../pt/">Português</a> · <a href="../es/">Español</a> · <a href="../fr/">Français</a> · <span>Deutsch</span>',
-  intro='Ich bekomme mehr E-Mails von Menschen, die mir zum ersten Mal schreiben, als ich lesen kann. Ein kleines Tool, das ich selbst gebaut habe, legt sie beiseite und antwortet für mich mit einer einzigen Bitte: einer Spende von 2 $ an GiveDirectly, als Zeichen, dass Ihre E-Mail wirklich für mich bestimmt war.',
+  intro='Ich bekomme mehr E-Mails von Menschen, die mir zum ersten Mal schreiben, als ich lesen kann. Give to Reach legt sie beiseite und antwortet für mich mit einer einzigen Bitte: einer Spende von 2 $ an GiveDirectly, als Zeichen, dass Ihre E-Mail wirklich für mich bestimmt war.',
   byline='CRO bei Talka. Davor bei Stripe, Twitter und Google.', linkedin='LinkedIn',
   known='* Menschen, die ich kenne: alle, denen ich schon einmal geschrieben habe, alle aus einer Organisation, an die ich schon einmal geschrieben habe, und alle, die mir eine dieser Personen vorgestellt hat.',
   how='So funktioniert es',
@@ -30,4 +30,4 @@ T = dict(lang='de', title='Give to Reach', desc='Eine Spende von 2 $ an GiveDire
   button='Auf die Warteliste', subject='Warteliste für Give to Reach', body='Wie viele unaufgeforderte B2B-E-Mails landen ungefähr pro Woche in Ihrem Posteingang, den Spam-Ordner nicht mitgezählt?\n\nWarum möchten Sie das?\n',
   small='Ihre Antworten, Ihre Adresse und den Link zu Ihrem Profil liest niemand außer mir; sie werden nur genutzt, um Sie einzuladen, und auf Wunsch gelöscht.',
   privacy='Datenschutzerklärung', terms='Nutzungsbedingungen',
-  foot='Give to Reach ist ein Gmail-Add-on, das ich selbst gebaut habe und in meinem eigenen Postfach einsetze. Ein privates Projekt, unabhängig von Talka. Betrieben von Sergio González, Portugal. Kontakt: <a href="mailto:sergio@givetoreach.com">sergio@givetoreach.com</a>. Stand: 14. September 2026.')
+  foot='Give to Reach ist ein Gmail-Add-on, das ich selbst gebaut habe und in meinem eigenen Postfach einsetze. Betrieben von Sergio González, Portugal. Kontakt: <a href="mailto:sergio@givetoreach.com">sergio@givetoreach.com</a>. Stand: 14. September 2026.')
