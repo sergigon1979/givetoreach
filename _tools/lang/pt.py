@@ -2,7 +2,7 @@
 T = dict(lang='pt', title='Give to Reach', desc='Um donativo de 2 $ à GiveDirectly, como sinal de que o seu e-mail era mesmo para mim. Como funciona o Give to Reach e o que guarda do seu e-mail.',
   switch='<a href="../">English</a> · <span>Português</span> · <a href="../es/">Español</a> · <a href="../fr/">Français</a> · <a href="../de/">Deutsch</a>',
   intro='Recebo mais e-mails de primeiro contacto do que consigo ler. O Give to Reach põe-nos de parte e responde por mim com um único pedido: um donativo de 2 $ à GiveDirectly, como sinal de que o seu e-mail era mesmo para mim.',
-  byline='Produto e Receita na Talka. Antes, na Stripe, no Twitter e na Google.', linkedin='LinkedIn',
+  byline='Produto e GTM na Talka. Antes, na Stripe, no Twitter e na Google.', linkedin='LinkedIn',
   known='* Pessoas que conheço: qualquer pessoa a quem já escrevi, qualquer pessoa de uma organização a que já escrevi, ou alguém que uma dessas pessoas me tenha apresentado.',
   how='Como funciona',
   steps=['O Give to Reach põe de parte todos os e-mails de pessoas que não conheço<sup>*</sup>, e por isso nunca chego a vê-los.',
