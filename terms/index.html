@@ -1,218 +1,94 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Terms · Give to Reach</title><style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-      line-height: 1.6; color: #1a1a1a; background: #ffffff;
-    }
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Terms · Give to Reach</title>
+<link rel="icon" href="../logo/give-to-reach-logo-32.png">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<div class="wrap doc">
 
-    .site-header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      background: #f8f9fa;
-      border-bottom: 1px solid #e0e0e0;
-      z-index: 1000;
-      padding: 32px 20px;
-    }
-    .header-content {
-      max-width: 560px;
-      margin: 0 auto;
-      text-align: center;
-    }
+  <header class="top">
+    <a class="mark" href="../"><img src="../logo/give-to-reach-logo-128.png" alt=""><span>Give to Reach</span></a>
+  </header>
+  <h1>Terms</h1>
+  <p class="meta"><em>Last updated: 17 September 2026. Operator and contact: Sergio González, Portugal, <a href="mailto:sergio@givetoreach.com">sergio@givetoreach.com</a>.</em></p>
 
-    .container {
-      max-width: 560px;
-      margin: 0 auto;
-      padding: 0 20px 40px 20px;
-      text-align: center;
-    }
+  <p>Give to Reach is a Gmail add-on built and run by Sergio González. It is free, and none of the money a sender gives reaches him or anyone else involved. By installing it you agree to the following. The <a href="/privacy/">privacy policy</a> is part of these terms.</p>
 
-    h1 {
-      font-size: 42px;
-      font-weight: 700;
-      margin-bottom: 16px;
-      letter-spacing: -0.5px;
-      color: #1b5e20;
-    }
-    .intro { font-size: 18px; color: #444; line-height: 1.6; }
-    .intro-cta {
-        font-size: 18px;
-        font-weight: 600;
-        color: #1a1a1a;
-        margin-top: 8px;
-    }
+  <h2>1. What it does in your name</h2>
+  <ul>
+  <li>It runs inside your own Google account, as you, once an hour. It reads mail from senders you have never dealt with, has each one classified by an AI model (see below), and, for the ones the model calls a cold pitch, moves them out of your inbox under a visible label and sends one reply in that thread, from your address and in your name, asking the sender to give $2 to GiveDirectly to have the email put back. Anything else a first-time sender writes you stays in your inbox with a label saying what it looked like.</li>
+  <li>Nothing is deleted. You can review, restore, mark a sender as known, or stop the whole thing at any time from the add-on's card, and by uninstalling it.</li>
+  <li><strong>Every email from a first-time sender is read by an AI model.</strong> The model's answer is what decides whether an email is set aside, so this is how the add-on works rather than a setting; installing it is agreeing to it. Your own name, addresses and company are replaced before the text leaves your account; the sender's text goes as written and is discarded after it is read. The <a href="/privacy/">privacy policy</a> names the provider, says exactly what is sent and what comes back, and is updated and dated before the provider ever changes.</li>
+  <li>Nothing is read, held, scored or answered until you have filled in the four profile fields on the settings card. Until then the add-on does nothing to your mail.</li>
+  </ul>
 
-    .profile {
-      margin-top: 280px;
-    }
+  <h2>2. Who may use it</h2>
+  <ul>
+  <li>You must be the owner of the Gmail mailbox you install it on, or have that owner's permission.</li>
+  <li>If your mailbox belongs to an employer's Google Workspace, it is your responsibility to make sure that installing add-ons, archiving mail automatically, sending automated replies, and sending mail from strangers to an outside AI service to be read are all allowed there. The last of those is how the add-on works, so it is worth settling before you install.</li>
+  <li>Access is limited and given out by hand. It may be withdrawn from anyone at any time.</li>
+  </ul>
 
-    .profile, .how-it-works, .unified-donation-container, .details-section {
-      margin-bottom: 32px;
-    }
+  <h2>3. The reply promise is yours</h2>
+  <ul>
+  <li>The automated reply promises the sender an answer within a number of business days (three by default; you set it) once their gift has landed. That promise is made in your name and it is yours to keep. The add-on restores the email, stars it, shows you a countdown and nags you, but it cannot answer for you.</li>
+  <li>You approve the wording of the reply, and you are responsible for it as for any email sent from your address. The reply carries your name and your company; it never carries a postal address.</li>
+  <li>Before installing, remove any Gmail filter or other rule that archives unknown senders; it would work against the add-on and could hide a restored email from you.</li>
+  </ul>
 
-    .how-it-works, .details-section {
-      background: #f8f9fa; border-radius: 12px; padding: 28px; text-align: left;
-    }
+  <h2>4. Donations</h2>
+  <ul>
+  <li>A sender's gift goes to GiveDirectly through Every.org. Every.org is a registered US 501(c)(3) public charity and is the legal recipient of the gift; it issues the donor's receipt and its own terms apply to the transaction. The same charity applies to everyone; you cannot choose a different one.</li>
+  <li>The gift is not a payment to you, to Sergio González, or to Give to Reach. Nobody involved other than Every.org and GiveDirectly ever touches the money, and neither you nor Sergio can refund a gift. If you miss your reply promise, what the sender is owed is your apology.</li>
+  <li>The amount and wording a sender sees may vary between senders while a variant is being tested (for example $2 against $3). The amount is always stated to the sender before they give.</li>
+  <li>Nothing here is tax advice for you or for a sender. Whether a gift is deductible is a question for the donor and their tax authority.</li>
+  </ul>
 
-    .how-it-works h2, .details-section h2 {
-      font-size: 16px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: #1b5e20; margin-bottom: 18px;
-    }
-    .how-it-works ol { margin-left: 20px; padding-left: 0; }
-    .how-it-works li { margin-bottom: 10px; font-size: 16px; line-height: 1.5; }
+  <h2>5. Scoring by an AI model</h2>
+  <ul>
+  <li>The text of every email from a first-time sender is sent from your own account to an AI model and scored against a fixed rubric, as described in the privacy policy, which names the provider. Nothing is sent until you have filled in your profile on the settings card.</li>
+  <li>The scores, categories and excerpts are the opinions of a model about a piece of writing, not facts about a person or a company. They decide only what happens to the email: a cold pitch is set aside and answered once; anything else stays in your inbox with a label saying what the model made of it, and nobody is replied to. Do not use them for any decision about a person beyond answering their email.</li>
+  </ul>
 
-    .unified-donation-container {
-      background: #e8f5e9; color: #1b5e20; border-radius: 12px;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.05); padding: 24px; text-align: center;
-    }
-    .unified-donation-container .charity-info {
-      font-size: 16px; font-weight: 500; margin-top: 20px;
-    }
-    .unified-donation-container .charity-info a {
-      color: #2e7d32; text-decoration: underline;
-    }
+  <h2>6. Research and published results</h2>
+  <ul>
+  <li>By installing you agree that scores, categories, placeholdered excerpts, the variant shown, a hashed sender identifier and event timestamps for every email the model reads may be sent to the Give to Reach relay and pooled with other participants' data, and that pooled, non-identifying statistics may be published, all as described in the <a href="/privacy/">privacy policy</a>.</li>
+  <li>A line of your own on the public page, under an anonymous label, appears only if you separately agree to it.</li>
+  <li>Your personal data is never sold or shared.</li>
+  </ul>
 
-    .trust-signal {
-      display: flex; align-items: center; justify-content: center;
-      gap: 8px; font-size: 13px; color: #555; margin-top: 16px;
-    }
+  <h2>7. Availability and changes</h2>
+  <ul>
+  <li>The add-on and the relay may be changed, paused or shut down at any time, and updates may be delivered to your install through the Google Workspace Marketplace without notice. Sergio can also stop all activity in every install at once with an operator kill switch; while it is on, the add-on's card says "Stopped by the operator" and nothing is held, replied to or restored until it is released.</li>
+  <li>It is designed to fail open: if it stops, or breaks, or is switched off, your mail simply arrives in your inbox as normal, and anything already held stays under its label for you to restore.</li>
+  <li>These terms may be updated. If the way the add-on uses your Google data changes, you will be asked to consent again inside the add-on before the change takes effect.</li>
+  </ul>
 
-    .profile {
-      display: flex; align-items: center; justify-content: center;
-      gap: 20px; padding: 24px; background: #fafafa; border-radius: 12px;
-    }
-    .profile img { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; }
-    .profile-info { text-align: left; }
-    .profile-info h3 { font-size: 20px; font-weight: 600; margin-bottom: 4px; }
-    .profile-info p { font-size: 14px; color: #666; margin-bottom: 8px; }
-    .profile-info a { color: #1b5e20; text-decoration: none; font-size: 14px; font-weight: 500; display: inline-flex; align-items: center; }
-    .profile-info a:hover { text-decoration: underline; }
-    
-    .faq-separator {
-        border: 0;
-        height: 1px;
-        background: #e0e0e0;
-        margin: 24px 0;
-    }
-    .faq-header {
-        font-size: 16px;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-        color: #1b5e20;
-        margin-bottom: 18px;
-    }
-    .faq-item {
-        margin-bottom: 20px;
-    }
-    .faq-item:last-child {
-        margin-bottom: 0;
-    }
-    .faq-item strong {
-        display: block;
-        color: #1a1a1a;
-    }
-    .faq-item p {
-        color: #444;
-        margin: 0;
-    }
-    
-    footer {
-        display: none;
-    }
+  <h2>8. Ending your use</h2>
+  <p>Uninstall the add-on at any time; that revokes its access to your account. Anything still held stays under its label in your mailbox until you restore or delete it. Ask at the contact address to have your data removed from the relay.</p>
 
-    @media (max-width: 640px) {
-      .profile {
-        margin-top: 300px;
-      }
-      h1 { font-size: 32px; }
-      .intro { font-size: 16px; }
-      .intro-cta { font-size: 16px; }
-      .profile { flex-direction: column; text-align: center; }
-      .profile-info { text-align: center; }
-    }
-  
-main{max-width:720px;margin:40px auto;padding:0 20px;line-height:1.6}h1,h2{line-height:1.2}
-main h2{font-size:22px;font-weight:600;color:#1b5e20;margin:36px 0 12px}
-main p{margin-bottom:14px}
-main ul,main ol{margin:0 0 16px 22px}
-main li{margin-bottom:8px}
-main a{color:#1b5e20}
-main .meta{color:#555;font-size:15px}
-main .placeholder{background:#fff3cd;padding:0 5px;border-radius:4px;font-weight:600}
-</style></head><body><main>
-<h1>Terms</h1>
-<p class="meta"><em>Last updated: 17 September 2026. Operator and contact: Sergio González, Portugal, <a href="mailto:sergio@givetoreach.com">sergio@givetoreach.com</a>.</em></p>
+  <h2>9. No warranty</h2>
+  <p>Give to Reach is provided as is and as available, without any warranty of any kind, express or implied, including that it will hold the right emails, leave the right ones alone, send every reply, notice every gift, or run at all. You remain responsible for your own inbox and for what is sent from it.</p>
 
-<p>Give to Reach is a Gmail add-on built and run by Sergio González. It is free, and none of the money a sender gives reaches him or anyone else involved. By installing it you agree to the following. The <a href="/privacy/">privacy policy</a> is part of these terms.</p>
+  <h2>10. Limitation of liability</h2>
+  <p>To the fullest extent permitted by law, Sergio González is not liable for any loss or damage arising from your use of Give to Reach, including a held or missed email, a reply sent in your name, a sender's reaction, a gift that was not matched, or a missed reply promise. Where liability cannot be excluded by law it is limited to the amount you paid for the service, which is nothing.</p>
 
-<h2>1. What it does in your name</h2>
-<ul>
-<li>It runs inside your own Google account, as you, once an hour. It reads mail from senders you have never dealt with, has each one classified by an AI model (see below), and, for the ones the model calls a cold pitch, moves them out of your inbox under a visible label and sends one reply in that thread, from your address and in your name, asking the sender to give $2 to GiveDirectly to have the email put back. Anything else a first-time sender writes you stays in your inbox with a label saying what it looked like.</li>
-<li>Nothing is deleted. You can review, restore, mark a sender as known, or stop the whole thing at any time from the add-on's card, and by uninstalling it.</li>
-<li><strong>Every email from a first-time sender is read by an AI model.</strong> The model's answer is what decides whether an email is set aside, so this is how the add-on works rather than a setting; installing it is agreeing to it. Your own name, addresses and company are replaced before the text leaves your account; the sender's text goes as written and is discarded after it is read. The <a href="/privacy/">privacy policy</a> names the provider, says exactly what is sent and what comes back, and is updated and dated before the provider ever changes.</li>
-<li>Nothing is read, held, scored or answered until you have filled in the four profile fields on the settings card. Until then the add-on does nothing to your mail.</li>
-</ul>
+  <h2>11. Governing law</h2>
+  <p>Give to Reach is run from Portugal. These terms are governed by Portuguese law, and any dispute will be brought before the Portuguese courts, without prejudice to any protection you are entitled to under the law of the place where you live.</p>
 
-<h2>2. Who may use it</h2>
-<ul>
-<li>You must be the owner of the Gmail mailbox you install it on, or have that owner's permission.</li>
-<li>If your mailbox belongs to an employer's Google Workspace, it is your responsibility to make sure that installing add-ons, archiving mail automatically, sending automated replies, and sending mail from strangers to an outside AI service to be read are all allowed there. The last of those is how the add-on works, so it is worth settling before you install.</li>
-<li>Access is limited and given out by hand. It may be withdrawn from anyone at any time.</li>
-</ul>
+  <h2>12. Google</h2>
+  <p>Your use of Gmail remains subject to Google's own terms. The add-on's use of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements, as set out in the privacy policy.</p>
 
-<h2>3. The reply promise is yours</h2>
-<ul>
-<li>The automated reply promises the sender an answer within a number of business days (three by default; you set it) once their gift has landed. That promise is made in your name and it is yours to keep. The add-on restores the email, stars it, shows you a countdown and nags you, but it cannot answer for you.</li>
-<li>You approve the wording of the reply, and you are responsible for it as for any email sent from your address. The reply carries your name and your company; it never carries a postal address.</li>
-<li>Before installing, remove any Gmail filter or other rule that archives unknown senders; it would work against the add-on and could hide a restored email from you.</li>
-</ul>
+  <h2>13. Contact</h2>
+  <p>Sergio González, <a href="mailto:sergio@givetoreach.com">sergio@givetoreach.com</a>.</p>
 
-<h2>4. Donations</h2>
-<ul>
-<li>A sender's gift goes to GiveDirectly through Every.org. Every.org is a registered US 501(c)(3) public charity and is the legal recipient of the gift; it issues the donor's receipt and its own terms apply to the transaction. The same charity applies to everyone; you cannot choose a different one.</li>
-<li>The gift is not a payment to you, to Sergio González, or to Give to Reach. Nobody involved other than Every.org and GiveDirectly ever touches the money, and neither you nor Sergio can refund a gift. If you miss your reply promise, what the sender is owed is your apology.</li>
-<li>The amount and wording a sender sees may vary between senders while a variant is being tested (for example $2 against $3). The amount is always stated to the sender before they give.</li>
-<li>Nothing here is tax advice for you or for a sender. Whether a gift is deductible is a question for the donor and their tax authority.</li>
-</ul>
+  <p><a href="/">Back to Give to Reach</a> · <a href="/privacy/">Privacy policy</a></p>
 
-<h2>5. Scoring by an AI model</h2>
-<ul>
-<li>Scoring is optional and switched on by you. When it is on, the text of a held pitch is sent from your own account to Anthropic and scored against a fixed rubric, as described in the privacy policy.</li>
-<li>The scores, categories and excerpts are the opinions of a model about a piece of writing, not facts about a person or a company. They decide only whether an automated reply goes out; anything the model does not read as a cold pitch stays held for you to look at, and nobody is replied to. Do not use them for any decision about a person beyond answering their email.</li>
-</ul>
-
-<h2>6. Research and published results</h2>
-<ul>
-<li>By installing you agree that scores, categories, placeholdered excerpts, the variant shown, a hashed sender identifier and event timestamps for the emails the add-on gates may be sent to the Give to Reach relay and pooled with other participants' data, and that pooled, non-identifying statistics may be published, all as described in the <a href="/privacy/">privacy policy</a>.</li>
-<li>A line of your own on the public page, under an anonymous label, appears only if you separately agree to it.</li>
-<li>Your personal data is never sold or shared.</li>
-</ul>
-
-<h2>7. Availability and changes</h2>
-<ul>
-<li>The add-on and the relay may be changed, paused or shut down at any time, and updates may be delivered to your install through the Google Workspace Marketplace without notice. Sergio can also stop all activity in every install at once with an operator kill switch; while it is on, the add-on's card says "Stopped by the operator" and nothing is held, replied to or restored until it is released.</li>
-<li>It is designed to fail open: if it stops, or breaks, or is switched off, your mail simply arrives in your inbox as normal, and anything already held stays under its label for you to restore.</li>
-<li>These terms may be updated. If the way the add-on uses your Google data changes, you will be asked to consent again inside the add-on before the change takes effect.</li>
-</ul>
-
-<h2>8. Ending your use</h2>
-<p>Uninstall the add-on at any time; that revokes its access to your account. Anything still held stays under its label in your mailbox and your log stays in your Drive until you delete them. Ask at the contact address to have your data removed from the relay.</p>
-
-<h2>9. No warranty</h2>
-<p>Give to Reach is provided as is and as available, without any warranty of any kind, express or implied, including that it will hold the right emails, leave the right ones alone, send every reply, notice every gift, or run at all. You remain responsible for your own inbox and for what is sent from it.</p>
-
-<h2>10. Limitation of liability</h2>
-<p>To the fullest extent permitted by law, Sergio González is not liable for any loss or damage arising from your use of Give to Reach, including a held or missed email, a reply sent in your name, a sender's reaction, a gift that was not matched, or a missed reply promise. Where liability cannot be excluded by law it is limited to the amount you paid for the service, which is nothing.</p>
-
-<h2>11. Governing law</h2>
-<p>Give to Reach is run from Portugal. These terms are governed by Portuguese law, and any dispute will be brought before the Portuguese courts, without prejudice to any protection you are entitled to under the law of the place where you live.</p>
-
-<h2>12. Google</h2>
-<p>Your use of Gmail remains subject to Google's own terms. The add-on's use of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements, as set out in the privacy policy.</p>
-
-<h2>13. Contact</h2>
-<p>Sergio González, <a href="mailto:sergio@givetoreach.com">sergio@givetoreach.com</a>.</p>
-
-<p><a href="/">Back to Give to Reach</a> · <a href="/privacy/">Privacy policy</a></p></main></body></html>
+  <p class="end"><a href="/">Back to Give to Reach</a> · <a href="/privacy/">Privacy policy</a></p>
+</div>
+</body>
+</html>
